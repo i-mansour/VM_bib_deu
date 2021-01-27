@@ -73,7 +73,7 @@ Sobald euer Thema genehmigt ist, könnt ihr mit der bibliometrischen Analyse beg
 
 ### 1. Erstelle eine BibTeX-Datei im Web of Science
 
-Ich habe ein Tutorial-Video aufgenommen, das zeigt, wie man eine Literatursuche im Web of Science durchführt und die Ergebnisse als .bib-Datei exportiert. Dieses ist auf [VBrick](https://youtu.be/4wwoNNRR94A) und Blackboard verfügbar. Folge dem Video und erstelle deine BibTeX-Datei.
+Ich habe ein Tutorial-Video aufgenommen, das zeigt, wie man eine Literatursuche im Web of Science durchführt und die Ergebnisse als .bib-Datei exportiert. Dieses ist auf [VBrick](https://fu-berlin.eu.vbrickrev.com/sharevideo/2cb4b6bb-11a1-4b38-8618-705412d5fde3) verfügbar. Folge dem Video und erstelle deine BibTeX-Datei.
 
 ### 2. Beginne eure Bibliometrics Analyse
 
@@ -219,7 +219,7 @@ Einige Beispiele (eure Zahlen müssen nicht so kompliziert sein, aber ihr dürft
 
 ![Diese zeigen verschiedene Behandlungsarten, die in verschiedenen Studien angewendet wurden. Dies wird als "Lollipop-Diagramm" bezeichnet. Beachte, dass die Temperatur die häufigste Behandlung in allen Studien war.](BRV_Fig1b_v2.png)
 
-![TDies zeigt, wie verschiedene Studientypen ("Classification") über die untersuchten Ebenen der ökologischen Organisation verteilt wurden. Beachte, dass es weniger Studien auf den Ebenen "Community" und "Ecosystem" gibt, und die meisten Studien auf der Ebene "Individual" experimentell waren.](BRV_Fig1c.png)
+![Dies zeigt, wie verschiedene Studientypen ("Classification") über die untersuchten Ebenen der ökologischen Organisation verteilt wurden. Beachte, dass es weniger Studien auf den Ebenen "Community" und "Ecosystem" gibt, und die meisten Studien auf der Ebene "Individual" experimentell waren.](BRV_Fig1c.png)
 
 ![Diese Darstellung zeigt, wie die verschiedenen Organismengruppen in verschiedenen Studien auf die Behandlungskategorien verteilt wurden; RoC = Rate of Change. Beachte, dass viele Studien Fische und Insekten untersucht haben.](BRV_FigX_B2.png)
 
