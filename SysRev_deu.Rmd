@@ -1,5 +1,5 @@
 ---
-title: "SysRev_deu"
+title: "Praktikum Aktivität 3"
 author: "Dr. India Mansour"
 date: "January 2021"
 output: 
@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Überblick
 
-Diese Aktivität ist eine Einführung in einige Techniken und Pakete, die verwendet werden können, um eine systematische Überprüfung der Literatur durchzuführen. Wir werden diese Techniken verwenden, um die Literatur über **Bodenkohlenstoff** zu untersuchen. Wir werden das von Nakagawa *et al.* (2019) vorgeschlagene "research weaving"-Framework verwenden, das Bibliometrie und systematisches Mapping beinhaltet. Aus ihrem Abstract (Hervorhebung von mir):
+Diese Aktivität ist eine Einführung in einige Methoden und Pakete, die verwendet werden können, um eine "Systematic Review" der Literatur durchzuführen. Wir werden diese Methoden verwenden, um die Literatur über **Bodenkohlenstoff** zu untersuchen. Wir werden das von Nakagawa *et al.* (2019) vorgeschlagene "research weaving"-Framework verwenden, das Bibliometrie und systematisches Mapping beinhaltet. Aus ihrem Abstract (Hervorhebung von mir):
 
 > "Research weaving provides a novel framework that **combines bibliometrics and systematic mapping** to inform the development of a field, the influence of research papers and their interconnections, and to visualize content across and within publications."
 
@@ -27,27 +27,27 @@ Diese Aktivität ist eine Einführung in einige Techniken und Pakete, die verwen
 
 Ihr könnt mehr über das "Research Weaving" erfahren, indem ihr ihre Artikel [hier](https://doi.org/10.1016/j.tree.2018.11.007) lest.
 
-Ihr werdet damit beginnen, eine Forschungsfrage zu entwickeln und dann mit Web of Science [WoS] (https://apps.webofknowledge.com/WOS_GeneralSearch_input.do?product=WOS&search_mode=GeneralSearch&SID=D5U7NnnEhob17JVozzU&preferencesSaved=) eine Literaturrecherche durchzuführen. Ihr müsst ein VPN eingerichtet haben, um WoS von zu Hause aus nutzen zu können - wenn ihr das noch nicht getan habt, folgt den Anweisungen der FU-Bibliothek [hier](https://www.zedat.fu-berlin.de/VPN).
+Ihr werdet damit beginnen, eine Forschungsfrage zu entwickeln und dann mit Web of Science [WoS](https://apps.webofknowledge.com/WOS_GeneralSearch_input.do?product=WOS&search_mode=GeneralSearch&SID=D5U7NnnEhob17JVozzU&preferencesSaved=) eine Literaturrecherche durchzuführen. Ihr müsst ein VPN eingerichtet haben, um WoS von zu Hause aus nutzen zu können - wenn ihr das noch nicht getan habt, folgt den Anweisungen der FU-Bibliothek [hier](https://www.zedat.fu-berlin.de/VPN).
 
 Denke daran, dass eure Gruppe eure Forschungsfrage und den 'Search string' genehmigt haben muss, bevor ihr fortfahrt! 
 
-Ihr werdet dann die Suchergebnisse als .bib-Datei exportieren. Diese wird verwendet, um eine explorative bibliometrische Analyse mit dem Paket `bibliometrix` durchzuführen (vielleicht erinnerst du dich daran, wenn du das Ökologie Basismodul im Juni belegt hast).
+Ihr werdet dann die Suchergebnisse als .bib-Datei exportieren. Diese wird verwendet, um eine explorative bibliometrische Analyse mit dem Paket `bibliometrix` durchzuführen (vielleicht erinnert ihr euch daran, wenn ihr das Ökologie Basismodul im Juni belegt habt).
 
-Du wirst dann Einschluss-/Ausschlusskriterien entwickeln und das Paket `revtools` benutzen, um die Literatur zu screenen.
+Ihr werdet dann Einschluss-/Ausschlusskriterien entwickeln und das Paket `revtools` benutzen, um die Literatur zu screenen.
 
 ## Entwickeln einer Forschungsfrage und eines Search string
 
-### 1. Finde ein Thema mit deiner Gruppe
+### 1. Finde ein Thema mit eurer Gruppe
 
 Eure erste Aufgabe ist es, eine Literaturrecherche im Web of Science (WoS) zum Thema **Kohlenstoffkreislauf, organische Bodensubstanz und/oder Zersetzung in Böden** durchzuführen. Ihr möchtet z.B. Literatur über Nekromasse erforschen, die Kohlenstoffdynamik in Wüstenböden untersuchen oder untersuchen, wie Trockenheit den Abbau organischer Substanz im Boden beeinflusst. Bitte besprich das Thema mit eurer Gruppe und findet ein Thema, das für euch alle interessant ist.
 
-### 2. Überlege dir eine Forschungsfrage
+### 2. Entwickle eine Forschungsfrage
 
 Dann solltet ihr euch eine Forschungsfrage ausdenken. Diese sollte so allgemein sein, dass sie durch eine Literaturrecherche beantwortet werden kann. Zum Beispiel: "Wie beeinflusst Trockenheit die Zersetzung organischer Substanz im Boden?" oder "Wie tragen Pilze zur Nekromassendynamik im Boden bei?".
 
-### 3. Beginne die Suche...und entwickle einen Suchstring
+### 3. Beginne die Suche...und entwickle einen Search string
 
-Ihr werdet euren eigenen Search string erstellen müssen, mit Ergebnissen im Bereich von 100-300 Artikeln. Dein Ziel ist es, einen Search string zu erstellen, der *alle* Artikel erfasst, die für dein Forschungsthema relevant sind. 
+Ihr werdet euren eigenen Search string erstellen müssen, mit Ergebnissen im Bereich von 100-300 Artikeln. Euer Ziel ist es, einen Search string zu erstellen, der *alle* Artikel erfasst, die für dein Forschungsthema relevant sind. 
 
 Hier sind einige Beispiele für Search strings:
 
@@ -61,9 +61,9 @@ dieser Search string verwendet ein Sternchen *, so dass alle Ergebnisse, die mit
 
 Ihr könnt über die Operatoren (z.B. AND und OR) lesen, die ihr in eurem Search string verwenden müsst [hier](https://images.webofknowledge.com/images/help/WOS/hs_search_operators.html) und es gibt weitere [WoS-Suchtipps hier](https://clarivate.libguides.com/woscc/searchtips).
 
-### 4. Verfeinere deine Suche und deinen Suchstring
+### 4. Verfeinere die Suche und den Search string
 
-Es gibt *eine Menge* Literatur über Bodenkohlenstoff - stelle sicher, dass du deine Suche verfeinerst, um etwa 100-300 Ergebnisse zu erhalten. Ihr solltet alle zuerst versuchen, die Anzahl der Ergebnisse zu reduzieren, indem ihr eure Forschungsfrage spezifischer macht. Konzentriere euch zum Beispiel auf einen bestimmten Typ von Ökosystem (tropischer Wald oder Grasland). Falls nötig, könnt ihr die Anzahl der Suchergebnisse weiter reduzieren, indem ihr die 'Refine Results'-Kategorien auf WoS nutzt. Ihr könntet zum Beispiel die Jahre der Suche eingrenzen oder Review-Artikel ausschließen. Schreibe auf, was du tust! Und denke daran, diese Entscheidungen werden später beeinflussen, wie ihr eure Ergebnisse interpretiert!
+Es gibt *eine Menge* Literatur über Bodenkohlenstoff - stelle sicher, dass ihr eure Suche verfeinerst, um etwa 100-300 Ergebnisse zu erhalten. Ihr solltet alle zuerst versuchen, die Anzahl der Ergebnisse zu reduzieren, indem ihr eure Forschungsfrage spezifischer macht. Konzentriere euch zum Beispiel auf einen bestimmten Art von Ökosystem (tropischer Wald oder Grasland). Falls nötig, könnt ihr die Anzahl der Suchergebnisse weiter reduzieren, indem ihr die 'Refine Results'-Kategorien auf WoS nutzt. Ihr könntet zum Beispiel die Jahre der Suche eingrenzen oder Review-Artikel ausschließen. Schreibe auf, was du tust! Und denke daran, diese Entscheidungen werden später beeinflussen, wie ihr eure Ergebnisse interpretiert!
 
 **Wenn ihr euch für ein Thema entschieden habt, muss es von mir genehmigt werden, bevor eure Gruppe weitermacht.**
 
@@ -73,9 +73,9 @@ Sobald euer Thema genehmigt ist, könnt ihr mit der bibliometrischen Analyse beg
 
 ### 1. Erstelle eine BibTeX-Datei im Web of Science
 
-Ich habe ein Tutorial-Video aufgenommen, das zeigt, wie man eine Literatursuche im Web of Science durchführt und die Ergebnisse als .bib-Datei exportiert. Dieses ist auf [VBrick] (https://youtu.be/4wwoNNRR94A) und Blackboard verfügbar. Folge dem Video und erstelle deine BibTeX-Datei.
+Ich habe ein Tutorial-Video aufgenommen, das zeigt, wie man eine Literatursuche im Web of Science durchführt und die Ergebnisse als .bib-Datei exportiert. Dieses ist auf [VBrick](https://youtu.be/4wwoNNRR94A) und Blackboard verfügbar. Folge dem Video und erstelle deine BibTeX-Datei.
 
-### 2. Beginne deine Bibliometrics Analyse
+### 2. Beginne eure Bibliometrics Analyse
 
 Nun könnt ihr mit der Arbeit in R beginnen. Erstelle ein neues R-Skript für das Projekt. Falls ihr das Paket `bibliometrix` noch nicht installiert habt, tut dies bitte jetzt, etwa so: 
 
@@ -115,9 +115,9 @@ M["MILTNER A, 2012, BIOGEOCHEMISTRY", "DI"]
 M["MILTNER A, 2012, BIOGEOCHEMISTRY", "PY"]
 ```
 
-Nun wollen wir herausfinden, wie sich dein Forschungsthema im Laufe der Zeit entwickelt hat. Folge dem Tutorial-Abschnitt [Top-Authors’ Productivity over the Time] (https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html#top-authors-productivity-over-the-time). Speichere diesen Plot (bei einigen Datensätzen funktioniert das nicht gut -- wenn es nicht funktioniert, verzweifle nicht, verwende den 'produktivsten Autoren' Plot von vorher). Wer sind die Autoren, die heutzutage am meisten publizieren? Wer waren die Autoren, die früher am meisten veröffentlicht haben? Gibt es Autoren, die über einen langen Zeitraum regelmäßig publizieren? (Tipp: Ihr solltet einige dieser Autoren auf Referenzen für euer Protokoll überprüfen.)
+Nun wollen wir herausfinden, wie sich dein Forschungsthema im Laufe der Zeit entwickelt hat. Folge dem Tutorial-Abschnitt [Top-Authors’ Productivity over the Time](https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html#top-authors-productivity-over-the-time). Speichere diesen Plot (bei einigen Datensätzen funktioniert das nicht gut -- wenn es nicht funktioniert, verzweifle nicht, verwende den 'produktivsten Autoren' Plot von vorher). Wer sind die Autoren, die heutzutage am meisten publizieren? Wer waren die Autoren, die früher am meisten veröffentlicht haben? Gibt es Autoren, die über einen langen Zeitraum regelmäßig publizieren? (Tipp: Ihr solltet einige dieser Autoren auf Referenzen für euer Protokoll überprüfen.)
 
-Schauen wir uns nun an, wie die Schlüsselwörter in den Artikeln miteinander verbunden sind. Dies wird uns einen Einblick geben, wie die Unterthemen innerhalb deines Themas miteinander verbunden sind. Folge dem Tutorial, um [Keyword co-ccurrences] (https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html#keyword-co-occurrences) darzustellen. Gibt es Cluster von Schlüsselwörtern? Welche Ideen sind miteinander verbunden? Was sagt dir das über dein Thema? Zeigt dies etwas über die Art und Weise, wie Gruppen von Menschen dieses Thema denken/studieren?
+Schauen wir uns nun an, wie die Schlüsselwörter in den Artikeln miteinander verbunden sind. Dies wird uns einen Einblick geben, wie die Unterthemen innerhalb deines Themas miteinander verbunden sind. Folge dem Tutorial, um [Keyword co-ccurrences](https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html#keyword-co-occurrences) darzustellen. Gibt es Cluster von Schlüsselwörtern? Welche Ideen sind miteinander verbunden? Was sagt dir das über dein Thema? Zeigt dies etwas über die Art und Weise, wie Gruppen von Menschen dieses Thema denken/studieren?
 
 ```{r echo = FALSE}
 NetMatrix <- biblioNetwork(M, analysis = "co-occurrences", network = "keywords", sep = ";")
@@ -130,21 +130,21 @@ Schließlich werden wir die Beziehungen zwischen Autoren, Keywords und WoS-Kateg
 threeFieldsPlot(M, fields=c("DE","AU","SC"),n=c(10,10,10),width = 900)
 ```
 
-Achte darauf, dass ihr alle Ergebnisse und Diagramme aus dieser Übung speichert. Wenn ihr fertig seid, würde ich empfehlen, dass ihr als Gruppe ein paar Sätze über jedes Diagramm schreibt - wie interpretiert ihr die Ergebnisse, die ihr erzeugt habt? Das wird es dir später leichter machen, dein Protokoll zu schreiben.
+Achte darauf, dass ihr alle Ergebnisse und Diagramme aus dieser Aufgabe speichert. Wenn ihr fertig seid, würde ich empfehlen, dass ihr als Gruppe ein paar Sätze über jedes Diagramm schreibt - wie interpretiert ihr die Ergebnisse, die ihr erzeugt habt? Das wird es dir später leichter machen, dein Protokoll zu schreiben.
 
-## Systematisches Mapping
+## Systematic Mapping
 
-Im nächsten Teil dieser Aktivität geht es darum, deine Artikel zu sichten und einige Informationen aus ihnen zu extrahieren, um eine 'Systematic map' zu erstellen. 
+Im nächsten Teil dieser Aktivität geht es darum, deine Artikel zu sichten und einige Informationen aus ihnen zu extrahieren, um 'Systematic maps' zu erstellen. 
 
 ### 1. Einschluss/Ausschluss-Kriterien
 
 Der erste Schritt besteht darin, deine Einschluss-/Ausschlusskriterien zu erstellen. Mit anderen Worten, was sind die Merkmale der Artikel, die du überprüfen wirst?
 
-Ihr solltet eure Forschungsfrage überdenken und entscheiden, welche Art von Artikeln und Daten nützlich sind, um eure Frage zu beantworten. Nehme ich meine Suche nach Boden/Nekromasse/Pilzen als Beispiel, könnte ich daran interessiert sein, wie die Pilzvielfalt und -aktivität die Zersetzung oder Stabilisierung von Nekromasse im Boden beeinflusst. Ich würde also nur Artikel einschließen, die sowohl Nekromasse als auch Pilzgemeinschaften (Diversität oder Funktionen) untersuchen. Ich würde Studien ausschließen, die nur Bakterien und keine Pilze untersuchen, oder die nur die Laubstreu, aber nicht die Nekromasse untersuchen.
+Ihr solltet eure Forschungsfrage überdenken und entscheiden, welche Art von Artikeln und Daten nützlich sind, um eure Frage zu beantworten. Nehme ich meine Suche nach Boden/Nekromasse/Pilzen als Beispiel, könnte ich daran interessiert sein, wie die Pilzvielfalt und -aktivität die Zersetzung oder Stabilisierung von Nekromasse im Boden beeinflusst. Ich würde also nur Artikel einschließen, die sowohl Nekromasse als auch Pilzlebensgemeinschaften (Diversität oder Funktionen) untersuchen. Ich würde Studien ausschließen, die nur Bakterien und keine Pilze untersuchen, oder die nur die Laubstreu, aber nicht die Nekromasse untersuchen.
 
-Achte darauf, dass ihr eure Ein- und Ausschlusskriterien aufschreibt!!! Dies ist sehr wichtig für die Reproduzierbarkeit und muss im Abschnitt 'Methoden' deines Protokolls geschrieben werden.
+Achte darauf, dass ihr eure Ein- und Ausschlusskriterien aufschreibt!! Dies ist sehr wichtig für die Reproduzierbarkeit und muss im Abschnitt 'Methoden' deines Protokolls geschrieben werden.
 
-### 2. Aufteilung der Artikel zwischen deiner Gruppe
+### 2. Aufteilung der Artikel
 
 Nun zurück zu R, aber nicht für lange! Wir werden `revtools` benutzen, um die Abstracts zu screenen.
 Lade das revtools-Paket und deine BibTeX-Datei:
