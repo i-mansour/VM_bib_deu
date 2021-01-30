@@ -208,39 +208,39 @@ write.csv(def_sel, "selected_articles.csv", row.names = F)
 
 ### 5. Datenextraktion
 
-Nun beginnst mit der Extraktion von Daten aus euren Artikeln. Ihr solltet ein paar Informationen auswählen, die für *euer* Thema relevant sind. Einige Ideen könnten sein: Art des Artikels, Art des Ökosystems, untersuchter Organismus... Versuche, dies nicht zu kompliziert zu machen, oder es wird sehr zeitaufwendig sein. Beispiele für Fragen, die ihr mit den Daten, die ihr extrahiert, beantworten könntet: Wurden die meisten Studien in gemäßigten Grasländern oder tropischen Wäldern durchgeführt? Haben sich die Forscher hauptsächlich auf Bodenmikroben oder Bodentiere konzentriert?
+Nun beginnt ihr mit der Extraktion von Daten aus euren Artikeln. Ihr solltet ein paar Informationen auswählen, die für *euer* Thema relevant sind. Einige Ideen könnten sein: Art des Artikels, Art des Ökosystems, untersuchter Organismus... Versucht, dies nicht zu kompliziert zu machen, sonst wird es sehr zeitaufwendig. Beispiele für Fragen, die ihr mit den extrahierten Daten beantworten könntet: Wurden die meisten Studien in gemäßigten Grasländern oder tropischen Wäldern durchgeführt? Haben sich die ForscherInnen hauptsächlich auf Bodenmikroben oder Bodentiere konzentriert?
 
-Öffne "selected_articles.csv" mit Excel, GoogleSheets oder was auch immer für eure Gruppe funktioniert. Lösche alle Spalten außer dem Veröffentlichungsjahr, Journal, Titel, Autoren und DOI. Erstelle neue Spaltennamen mit dem Namen der Daten, die eure Gruppe aus den Artikeln extrahieren wird. Arbeitet zusammen, um die Daten aus den Artikeln zu extrahieren und füllt die Spalten im Tabellenblatt aus. Ihr müsst die Artikel über den DOI suchen. (Manchmal funktioniert es am besten, wenn ihr den DOI und die Zeichenkette "doi" in Google kopiert, und stellt sicher, dass ihr mit eurem VPN eingeloggt seid, damit ihr Zugang habt!) Wenn ihr fertig seid mit dem Extrahieren der Daten aus jedem Artikel, speichert die Ergebnisse als .csv-Datei.
+Öffnet "selected_articles.csv" mit Excel, GoogleSheets oder was auch immer eure Gruppe am liebsten verwendet. Löscht alle Spalten außer dem Veröffentlichungsjahr, Journal, Titel, AutorInnen und DOI. Erstellt neue Spaltennamen mit dem Namen der Daten, die eure Gruppe aus den Artikeln extrahieren wird. Arbeitet zusammen, um die Daten aus den Artikeln zu extrahieren und füllt die Spalten in der Tabelle aus. Ihr müsst die Artikel über den DOI suchen. (Manchmal funktioniert es am besten, wenn ihr den DOI und die Zeichenkette "doi" in Google kopiert, und stellt sicher, dass ihr mit eurem VPN eingeloggt seid, damit ihr Zugang habt!) Wenn ihr fertig seid mit dem Extrahieren der Daten aus jedem Artikel, speichert die Ergebnisse als .csv-Datei.
 
 ### 6. Datenvisualisierung
 
-Lade die .csv-Datei mit deinen Screening-Ergebnissen und verwende die Fähigkeiten, die von Aufgabe 1 bekannt sind, um 1-2 Darstellungen mit Hilfe von ggplot in R zu erstellen. Euer Ziel hier ist es, einige Informationen über eure Gruppe von Artikeln zu zeigen, indem ihr die Daten verwendet, die ihr aus den Artikeln extrahiert habt. 
+Ladet die .csv-Datei mit euren Screening-Ergebnissen und verwendet eure neuen Fähigkeiten aus Aufgabe 1, um 1-2 Abbildungen^ mit Hilfe von ggplot in R zu erstellen. Euer Ziel hier ist es, einige Informationen über eure Gruppe von Artikeln zu zeigen, indem ihr die Daten verwendet, die ihr aus den Artikeln extrahiert habt. 
 Einige Beispiele (eure Zahlen müssen nicht so kompliziert sein, aber ihr dürft es gerne versuchen!):
 
-![Diese zeigen verschiedene Behandlungsarten, die in verschiedenen Studien angewendet wurden. Dies wird als "Lollipop-Diagramm" bezeichnet. Beachte, dass die Temperatur die häufigste Behandlung in allen Studien war.](BRV_Fig1b_v2.png)
+![Diese Abbildungen zeigt verschiedene Behandlungsarten, die in verschiedenen Studien angewendet wurden. Dies wird als "Lollipop-Diagramm" bezeichnet. Beachtet, dass die Temperatur die häufigste Behandlung in allen Studien war.](BRV_Fig1b_v2.png)
 
-![Dies zeigt, wie verschiedene Studientypen ("Classification") über die untersuchten Ebenen der ökologischen Organisation verteilt wurden. Beachte, dass es weniger Studien auf den Ebenen "Community" und "Ecosystem" gibt, und die meisten Studien auf der Ebene "Individual" experimentell waren.](BRV_Fig1c.png)
+![Hier wird gezeigt, wie verschiedene Studientypen ("Classification") über die untersuchten Ebenen der ökologischen Organisation verteilt wurden. Beachtet, dass es weniger Studien auf den Ebenen "Community" und "Ecosystem" gibt, und die meisten Studien auf der Ebene "Individual" experimentell waren.](BRV_Fig1c.png)
 
-![Diese Darstellung zeigt, wie die verschiedenen Organismengruppen in verschiedenen Studien auf die Behandlungskategorien verteilt wurden; RoC = Rate of Change. Beachte, dass viele Studien Fische und Insekten untersucht haben.](BRV_FigX_B2.png)
+![Diese Abbildung zeigt, wie die verschiedenen Organismengruppen in verschiedenen Studien auf die Behandlungskategorien verteilt wurden; RoC = Rate of Change. Beachtet, dass viele Studien Fische und Insekten untersucht haben.](BRV_FigX_B2.png)
 
 Diese Beispiele sind aus diesem [systematic review](https://doi.org/10.1111/brv.12639), obwohl nicht alle von ihnen es in den endgültigen Text geschafft haben.
-Wenn du das Farbschema magst, schau mal bei den [Wes Anderson Paletten für R](https://cran.r-project.org/web/packages/wesanderson/wesanderson.pdf) vorbei.
+Wenn euch das Farbschema gefällt, schaut euch mal die [Wes Anderson Paletten für R](https://cran.r-project.org/web/packages/wesanderson/wesanderson.pdf) an.
 
-Hilfe! --> Verweise zurück auf [R for Data Science](https://r4ds.had.co.nz/data-visualisation.html). In der [R Graph Gallery](https://www.r-graph-gallery.com/index.html) findet man Informationen darüber, wie man eine Menge verschiedener Arten von Darstellungen in R erstellen kann.
+Hilfe! --> Geht zurück zu [R for Data Science](https://r4ds.had.co.nz/data-visualisation.html). In der [R Graph Gallery](https://www.r-graph-gallery.com/index.html) findet man Informationen darüber, wie man eine Menge verschiedener Arten von Abbildungen in R erstellen kann.
 
 ### 7. Glückwunsch, ihr habt es geschafft! Jetzt ist es Zeit für das Protokoll.
 
-Okay, jetzt habt ihr ein paar Ergebnisse! Es ist an der Zeit, eure Ergebnisse mit eurer Gruppe zu besprechen und euer Protokoll zu schreiben. Ihr müsst die folgenden Abschnitte enthalten:
+Okay, jetzt habt ihr einige Ergebnisse! Es ist an der Zeit, sie mit eurer Gruppe zu besprechen und euer Protokoll zu schreiben. Das Protokoll muss die folgenden Abschnitte beinhalten:
 
-- Einführung: Erkläre einige Hintergrundinformationen zu deinem Thema und zitiere 3-5 peer-reviewed Artikel.
+- Einführung: Erläutert einige Hintergrundinformationen zu eurem Thema und zitiert 3-5 peer-reviewed Artikel.
 
-- Methoden: Enthält deinen Suchstring, alle Verfeinerungen deiner Suche in WoS, deine Einschluss-/Ausschlusskriterien und Informationen über die Pakete, die du in R verwendet hast (denke daran, die Paketautoren zu zitieren!).
+- Methoden: Enthält euren Search string, alle weiteren Einschränkungen eurer Suche in WoS, eure Einschluss-/Ausschlusskriterien und Informationen über die Packages, die ihr in R verwendet habt (denke daran, die AutorInnen der Packages zu zitieren!).
 
-- Ergebnisse: Gib einige allgemeine Informationen an (wie viele WoS-Ergebnisse hattest du? Wie viele Artikel sind nach dem Screening übrig geblieben?); füge alle bibliometrischen und systematischen Mapping-Abbildungen hinzu, die du erstellt hast, und beschreibe jede Abbildung in 1-2 Sätzen.
+- Ergebnisse: Gebt einige allgemeine Informationen an (wie viele WoS-Ergebnisse hattet du? Wie viele Artikel sind nach dem Screening übrig geblieben?); fügt alle bibliometrischen und systematischen Mapping-Abbildungen hinzu, die ihr erstellt habt, und beschreibt jede Abbildung in 1-2 Sätzen.
 
-- Diskussion: Schreibt darüber, wie ihr eure Ergebnisse interpretiert. Dies könnte ein guter Platz sein, um eure Ergebnisse mit einem früheren Artikel zu einem ähnlichen Thema zu vergleichen.
+- Diskussion: Schreibt darüber, wie ihr eure Ergebnisse interpretiert. Dies könnte ein guter Anlass sein, um eure Ergebnisse mit einem früheren Artikel zu einem ähnlichen Thema zu vergleichen.
 
-- Referenzen: Hier musst du vollständige Referenzen für alle in eurem Protokoll zitierte Literatur angeben (sie sollte in etwa wie die Referenzliste unten aussehen).
+- Referenzen: Hier müsst du vollständige Referenzen für alle in eurem Protokoll zitierte Literatur angeben (es sollte in etwa wie die Referenzliste unten aussehen).
 
 ## Referenzen
 
