@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Überblick
 
-Diese Aktivität ist eine Einführung in einige Methoden und Pakete, die verwendet werden können, um eine "Systematic Review" der Literatur durchzuführen. Wir werden diese Methoden verwenden, um die Literatur über **Bodenkohlenstoff** zu untersuchen. Wir werden das von Nakagawa *et al.* (2019) vorgeschlagene "research weaving"-Framework verwenden, das Bibliometrie und systematisches Mapping beinhaltet. Aus ihrem Abstract (Hervorhebung von mir):
+Diese Aktivität ist eine Einführung in einige Methoden und R-Packages, die verwendet werden können, um eine "Systematic Review" der Literatur durchzuführen. Wir werden diese Methoden benutzen, um die Literatur über **Bodenkohlenstoff** zu untersuchen. Wir werden das von Nakagawa *et al.* (2019) vorgeschlagene "research weaving"-Framework verwenden, das Bibliometrie und systematisches Mapping beinhaltet. Aus ihrem Abstract (Hervorhebung von mir):
 
 > "Research weaving provides a novel framework that **combines bibliometrics and systematic mapping** to inform the development of a field, the influence of research papers and their interconnections, and to visualize content across and within publications."
 
@@ -29,23 +29,23 @@ Ihr könnt mehr über das "Research Weaving" erfahren, indem ihr ihre Artikel [h
 
 Ihr werdet damit beginnen, eine Forschungsfrage zu entwickeln und dann mit Web of Science [WoS](https://apps.webofknowledge.com/WOS_GeneralSearch_input.do?product=WOS&search_mode=GeneralSearch&SID=D5U7NnnEhob17JVozzU&preferencesSaved=) eine Literaturrecherche durchzuführen. Ihr müsst ein VPN eingerichtet haben, um WoS von zu Hause aus nutzen zu können - wenn ihr das noch nicht getan habt, folgt den Anweisungen der FU-Bibliothek [hier](https://www.zedat.fu-berlin.de/VPN).
 
-Denke daran, dass eure Gruppe eure Forschungsfrage und den 'Search string' genehmigt haben muss, bevor ihr fortfahrt! 
+Denke daran, dass eure Gruppe eure Forschungsfrage und den 'Search string' genehmigt bekommen haben muss, bevor ihr fortfahrt! 
 
 Ihr werdet dann die Suchergebnisse als .bib-Datei exportieren. Diese wird verwendet, um eine explorative bibliometrische Analyse mit dem Paket `bibliometrix` durchzuführen (vielleicht erinnert ihr euch daran, wenn ihr das Ökologie Basismodul im Juni belegt habt).
 
-Ihr werdet dann Einschluss-/Ausschlusskriterien entwickeln und das Paket `revtools` benutzen, um die Literatur zu screenen.
+Ihr werdet dann Einschluss-/Ausschlusskriterien entwickeln und die Package `revtools` benutzen, um die Literatur zu screenen.
 
 ## Entwickeln einer Forschungsfrage und eines Search string
 
 ### 1. Finde ein Thema mit eurer Gruppe
 
-Eure erste Aufgabe ist es, eine Literaturrecherche im Web of Science (WoS) zum Thema **Kohlenstoffkreislauf, organische Bodensubstanz und/oder Zersetzung in Böden** durchzuführen. Ihr möchtet z.B. Literatur über Nekromasse erforschen, die Kohlenstoffdynamik in Wüstenböden untersuchen oder untersuchen, wie Trockenheit den Abbau organischer Substanz im Boden beeinflusst. Bitte besprich das Thema mit eurer Gruppe und findet ein Thema, das für euch alle interessant ist.
+Eure erste Aufgabe ist es, eine Literaturrecherche im Web of Science (WoS) zum Thema **Kohlenstoffkreislauf, organische Bodensubstanz und/oder Zersetzung in Böden** durchzuführen. Ihr möchtet z.B. Literatur über Nekromasse erforschen, die Kohlenstoffdynamik in Wüstenböden untersuchen oder untersuchen, wie Trockenheit den Abbau organischer Substanz im Boden beeinflusst. Bitte besprecht das Thema in der Gruppe und findet ein Thema, das für euch alle interessant ist.
 
-### 2. Entwickle eine Forschungsfrage
+### 2. Entwickelt eine Forschungsfrage
 
-Dann solltet ihr euch eine Forschungsfrage ausdenken. Diese sollte so allgemein sein, dass sie durch eine Literaturrecherche beantwortet werden kann. Zum Beispiel: "Wie beeinflusst Trockenheit die Zersetzung organischer Substanz im Boden?" oder "Wie tragen Pilze zur Nekromassendynamik im Boden bei?".
+Dann solltet ihr euch eine Forschungsfrage überlegen. Diese sollte so allgemein sein, dass sie durch eine Literaturrecherche beantwortet werden kann. Zum Beispiel: "Wie beeinflusst Trockenheit die Zersetzung organischer Substanz im Boden?" oder "Wie tragen Pilze zur Nekromassendynamik im Boden bei?".
 
-### 3. Beginne die Suche...und entwickle einen Search string
+### 3. Beginnt die Suche...und entwickelt einen Search string
 
 Ihr werdet euren eigenen Search string erstellen müssen, mit Ergebnissen im Bereich von 100-300 Artikeln. Euer Ziel ist es, einen Search string zu erstellen, der *alle* Artikel erfasst, die für dein Forschungsthema relevant sind. 
 
@@ -53,7 +53,7 @@ Hier sind einige Beispiele für Search strings:
 
 > ("soil organic matter"  OR "soil organic carbon"  OR "organic matter")  AND (decomposition  OR degradation)  AND drought
 
-dieser Suchstring verwendet Anführungszeichen "", um sicherzustellen, dass nur Artikel mit der gesamten Phrase "soil organic matter" in den Ergebnissen erscheinen. Er verwendet auch mehrere Wörter, z.B. "decomposition" und "degradation", um die gleiche Sache zu beschreiben. Dies erhöht die Chancen, alle relevanten Artikel zu finden.
+dieser Suchstring verwendet Anführungszeichen "", um sicherzustellen, dass nur Artikel mit dem gesamten Ausdruck "soil organic matter" in den Ergebnissen erscheinen. Er verwendet auch mehrere Wörter, z.B. "decomposition" und "degradation", um die gleiche Sache zu beschreiben. Dies erhöht die Chancen, alle relevanten Artikel zu finden.
 
 > (soil  AND necromass AND fung*)
 
@@ -61,9 +61,9 @@ dieser Search string verwendet ein Sternchen *, so dass alle Ergebnisse, die mit
 
 Ihr könnt über die Operatoren (z.B. AND und OR) lesen, die ihr in eurem Search string verwenden müsst [hier](https://images.webofknowledge.com/images/help/WOS/hs_search_operators.html) und es gibt weitere [WoS-Suchtipps hier](https://clarivate.libguides.com/woscc/searchtips).
 
-### 4. Verfeinere die Suche und den Search string
+### 4. Verfeinert die Suche und den Search string
 
-Es gibt *eine Menge* Literatur über Bodenkohlenstoff - stelle sicher, dass ihr eure Suche verfeinerst, um etwa 100-300 Ergebnisse zu erhalten. Ihr solltet alle zuerst versuchen, die Anzahl der Ergebnisse zu reduzieren, indem ihr eure Forschungsfrage spezifischer macht. Konzentriere euch zum Beispiel auf einen bestimmten Art von Ökosystem (tropischer Wald oder Grasland). Falls nötig, könnt ihr die Anzahl der Suchergebnisse weiter reduzieren, indem ihr die 'Refine Results'-Kategorien auf WoS nutzt. Ihr könntet zum Beispiel die Jahre der Suche eingrenzen oder Review-Artikel ausschließen. Schreibe auf, was du tust! Und denke daran, diese Entscheidungen werden später beeinflussen, wie ihr eure Ergebnisse interpretiert!
+Es gibt *eine Menge* Literatur über Bodenkohlenstoff - stellt sicher, dass ihr eure Suche verfeinert, um etwa 100-300 Ergebnisse zu erhalten. Ihr solltet alle zuerst versuchen, die Anzahl der Ergebnisse zu reduzieren, indem ihr eure Forschungsfrage spezifischer macht. Konzentriert euch zum Beispiel auf eine bestimmten Art von Ökosystem (tropischer Wald oder Grasland). Falls nötig, könnt ihr die Anzahl der Suchergebnisse weiter reduzieren, indem ihr die 'Refine Results'-Kategorien auf WoS nutzt. Ihr könntet zum Beispiel die Jahre der Suche eingrenzen oder Review-Artikel ausschließen. Schreibt auf, was ihr tut! Und denkt daran, diese Entscheidungen werden später beeinflussen, wie ihr eure Ergebnisse interpretiert!
 
 **Wenn ihr euch für ein Thema entschieden habt, muss es von mir genehmigt werden, bevor eure Gruppe weitermacht.**
 
@@ -73,17 +73,17 @@ Sobald euer Thema genehmigt ist, könnt ihr mit der bibliometrischen Analyse beg
 
 ### 1. Erstelle eine BibTeX-Datei im Web of Science
 
-Ich habe ein Tutorial-Video aufgenommen, das zeigt, wie man eine Literatursuche im Web of Science durchführt und die Ergebnisse als .bib-Datei exportiert. Dieses ist auf [VBrick](https://fu-berlin.eu.vbrickrev.com/sharevideo/2cb4b6bb-11a1-4b38-8618-705412d5fde3) verfügbar. Folge dem Video und erstelle deine BibTeX-Datei.
+Ich habe ein Tutorial-Video aufgenommen, das zeigt, wie man eine Literatursuche im Web of Science durchführt und die Ergebnisse als .bib-Datei exportiert. Dieses ist auf [VBrick](https://fu-berlin.eu.vbrickrev.com/sharevideo/2cb4b6bb-11a1-4b38-8618-705412d5fde3) verfügbar. Folgt dem Video und erstelle eure BibTeX-Datei.
 
 ### 2. Beginne eure Bibliometrics Analyse
 
-Nun könnt ihr mit der Arbeit in R beginnen. Erstelle ein neues R-Skript für das Projekt. Falls ihr das Paket `bibliometrix` noch nicht installiert habt, tut dies bitte jetzt, etwa so: 
+Nun könnt ihr mit der Arbeit in R beginnen. Erstellt ein neues R-Skript für das Projekt. Falls ihr die Package `bibliometrix` noch nicht installiert habt, tut dies bitte jetzt, etwa so: 
 
 ```{r eval = FALSE}
 install.packages("bibliometrix", dependencies=TRUE)
 ```
 
-und lade dann das Paket:
+und ladet dann die Package:
 
 ```{r message = FALSE}
 library(bibliometrix)
@@ -91,15 +91,15 @@ library(bibliometrix)
 
 [Die Dokumentation findet sich hier](https://cran.r-project.org/web/packages/bibliometrix/bibliometrix.pdf).
 
-Sobald ihr eine . bib-Datei erstellt habt, müsst ihr die Daten mit dem Paket `bibliometrix` in R laden und eine bibliometrische Analyse durchführen. Folge [diesem Tutorial](https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html). Wir beginnen mit dem Abschnitt [Data loading and converting](https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html#data-loading-and-converting). Es kann sein, dass du ein paar Minuten warten musst, bis der bibliografische Datenrahmen generiert wird... schau auf die Konsole!
+Sobald ihr eine .bib-Datei erstellt habt, müsst ihr die Daten mit der Package `bibliometrix` in R laden und eine bibliometrische Analyse durchführen. Folgt [diesem Tutorial](https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html). Wir beginnen mit dem Abschnitt [Data loading and converting](https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html#data-loading-and-converting). Es kann sein, dass ihr ein paar Minuten warten müsst, bis der bibliografische Data Frame generiert wird... achtet auf die Konsole!
 
-Sobald der Datenrahmen geladen ist, überprüfe ihn. Was sind die Spaltennamen?
-Tipp: versuche es mit `colnames()`.
+Sobald der Data Frame geladen ist, überprüft ihn. Was sind die Spaltennamen?
+Tipp: versucht es mit `colnames()`.
 Diese 2-Buchstaben-Codes werden 'field tags' genannt und es gibt eine komplette Liste [hier](https://www.bibliometrix.org/documents/Field_Tags_bibliometrix.pdf). Ihr werdet diese später benutzen müssen.
 
 ### 3. Eine deskriptive Analyse durchführen
 
-Folge dem Tutorial weiter und führe eine deskriptive [Bibliometric analysis](https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html#bibliometric-analysis) durch. Führe die Funktion `summary` aus. Schaut euch die Ergebnisse der Zusammenfassung in der Konsole an. Schreibe die Zeitspanne und die Anzahl der Quellen und Dokumente auf. Was sind die 5 am häufigsten zitierten Artikel in deiner Sammlung? Kopiere die DOIs in Web of Science und schaue dir die Abstracts an (Tipp: einige dieser Artikel könnten gut in der Einleitung deines Protokolls zitiert werden). Führe nun die Funktion `plot` aus. Speichere die Diagramme, die die "Most Productive Countries" und die "Annual Scientific Production" zeigen.
+Folgt dem Tutorial weiter und führe eine deskriptive [Bibliometric analysis](https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html#bibliometric-analysis) durch. Führe die Funktion `summary` aus. Schaut euch die Ergebnisse der Zusammenfassung in der Konsole an. Schreibt die Zeitspanne und die Anzahl der Quellen und Dokumente auf. Was sind die 5 am häufigsten zitierten Artikel in eurer Sammlung? Kopiert die DOIs in Web of Science und schaut euch die Abstracts an (Tipp: einige dieser Artikel könnten gut in der Einleitung eures Protokolls zitiert werden). Führt nun die Funktion `plot` aus. Speichere die Plots, die die "Most Productive Countries" und die "Annual Scientific Production" zeigen.
 
 ```{r include = FALSE}
 file <- "/Users/fastloris/Dropbox/Vertiefungsmodul course materials/WS2021/Praktikum/VM_bib_deu/soil_necromass_fungi.bib"
@@ -108,14 +108,14 @@ results <- biblioAnalysis(M, sep = ";")
 S <- summary(object = results, k = 10, pause = FALSE)
 ```
 
-Ihr könnt schnell den DOI oder das Publikationsjahr (oder jede andere Information im Datenrahmen) anzeigen, indem ihr den Artikel/Zeilennamen und den Field tag gebt, wie hier:
+Ihr könnt schnell den DOI oder das Publikationsjahr (oder jede andere Information im Datenrahmen) anzeigen, indem ihr den Artikel/Zeilennamen und den Field tag angebt, wie hier:
 
 ```{r}
 M["MILTNER A, 2012, BIOGEOCHEMISTRY", "DI"]
 M["MILTNER A, 2012, BIOGEOCHEMISTRY", "PY"]
 ```
 
-Nun wollen wir herausfinden, wie sich dein Forschungsthema im Laufe der Zeit entwickelt hat. Folge dem Tutorial-Abschnitt [Top-Authors’ Productivity over the Time](https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html#top-authors-productivity-over-the-time). Speichere diesen Plot (bei einigen Datensätzen funktioniert das nicht gut -- wenn es nicht funktioniert, verzweifle nicht, verwende den 'produktivsten Autoren' Plot von vorher). Wer sind die Autoren, die heutzutage am meisten publizieren? Wer waren die Autoren, die früher am meisten veröffentlicht haben? Gibt es Autoren, die über einen langen Zeitraum regelmäßig publizieren? (Tipp: Ihr solltet einige dieser Autoren auf Referenzen für euer Protokoll überprüfen.)
+Nun wollen wir herausfinden, wie sich euer Forschungsthema im Laufe der Zeit entwickelt hat. Folgt dem Tutorial-Abschnitt [Top-Authors’ Productivity over the Time](https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html#top-authors-productivity-over-the-time). Speichert diesen Plot (bei einigen Datensätzen funktioniert das nicht gut -- wenn es nicht funktioniert, verzweifelt nicht, verwendet die/den 'produktivste/n AutorIn' Plot von vorher). Wer sind die AutorInnen, die heutzutage am meisten publizieren? Wer waren die AutorInnen, die früher am meisten veröffentlicht haben? Gibt es AutorInnen, die über einen langen Zeitraum regelmäßig publizieren? (Tipp: Ihr solltet euch einige dieser AutorInnen auf Referenzen für euer Protokoll angucken.)
 
 Schauen wir uns nun an, wie die Schlüsselwörter in den Artikeln miteinander verbunden sind. Dies wird uns einen Einblick geben, wie die Unterthemen innerhalb deines Themas miteinander verbunden sind. Folge dem Tutorial, um [Keyword co-ccurrences](https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html#keyword-co-occurrences) darzustellen. Gibt es Cluster von Schlüsselwörtern? Welche Ideen sind miteinander verbunden? Was sagt dir das über dein Thema? Zeigt dies etwas über die Art und Weise, wie Gruppen von Menschen dieses Thema denken/studieren?
 
