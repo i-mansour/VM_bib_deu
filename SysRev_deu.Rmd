@@ -117,37 +117,37 @@ M["MILTNER A, 2012, BIOGEOCHEMISTRY", "PY"]
 
 Nun wollen wir herausfinden, wie sich euer Forschungsthema im Laufe der Zeit entwickelt hat. Folgt dem Tutorial-Abschnitt [Top-Authors’ Productivity over the Time](https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html#top-authors-productivity-over-the-time). Speichert diesen Plot (bei einigen Datensätzen funktioniert das nicht gut -- wenn es nicht funktioniert, verzweifelt nicht, verwendet die/den 'produktivste/n AutorIn' Plot von vorher). Wer sind die AutorInnen, die heutzutage am meisten publizieren? Wer waren die AutorInnen, die früher am meisten veröffentlicht haben? Gibt es AutorInnen, die über einen langen Zeitraum regelmäßig publizieren? (Tipp: Ihr solltet euch einige dieser AutorInnen auf Referenzen für euer Protokoll angucken.)
 
-Schauen wir uns nun an, wie die Schlüsselwörter in den Artikeln miteinander verbunden sind. Dies wird uns einen Einblick geben, wie die Unterthemen innerhalb deines Themas miteinander verbunden sind. Folge dem Tutorial, um [Keyword co-ccurrences](https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html#keyword-co-occurrences) darzustellen. Gibt es Cluster von Schlüsselwörtern? Welche Ideen sind miteinander verbunden? Was sagt dir das über dein Thema? Zeigt dies etwas über die Art und Weise, wie Gruppen von Menschen dieses Thema denken/studieren?
+Schauen wir uns nun an, wie die Keywords in den Artikeln miteinander verbunden sind. Dies wird uns einen Einblick geben, wie die Unterthemen innerhalb deines Themas miteinander verbunden sind. Folgt dem Tutorial, um [Keyword co-ccurrences](https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html#keyword-co-occurrences) darzustellen. Gibt es Cluster von Keywords? Welche Ideen sind miteinander verbunden? Was sagt euch das über euer Thema? Zeigt dies etwas über die Art und Weise, wie Gruppen von Menschen über dieses Thema nachdenken/daran forschen?
 
 ```{r echo = FALSE}
 NetMatrix <- biblioNetwork(M, analysis = "co-occurrences", network = "keywords", sep = ";")
 net=networkPlot(NetMatrix, normalize="association", weighted=T, n = 30, Title = "Keyword Co-occurrences", type = "fruchterman", size=T,edgesize = 5,labelsize=0.7)
 ```
 
-Schließlich werden wir die Beziehungen zwischen Autoren, Keywords und WoS-Kategorien untersuchen. Das Beispiel unten zeigt Verbindungen zwischen Autoren, Schlüsselwörtern und WoS-Kategorien. Ihr könnt jedes beliebige 3-Felder-Tag auswählen, das ihr möchtet -- die Betrachtung von Journals (SO) oder Common Cited References (CR) könnte auch interessant sein. Wir werden dies mit einem Three-fields plot machen, mit der Funktion `threeFieldsPlot`. Suche in der Hilfe-Suchleiste in R, um über diese Funktion zu lesen und ein Beispiel für ihre Verwendung zu sehen. Versuche, auf eines der Schlüsselwörter oder Autoren im Plot unten zu klicken.
+Schließlich werden wir die Beziehungen zwischen AutorInnen, Keywords und WoS-Kategorien untersuchen. Das Beispiel unten zeigt Verbindungen zwischen AutorInnen, Keywords und WoS-Kategorien. Ihr könnt jede beliebigen 3 Field Tags benutzen -- die Betrachtung von Journals (SO) oder Common Cited References (CR) könnte auch interessant sein. Wir werden dies mit einem Three-fields plot machen, mit der Funktion `threeFieldsPlot`. Sucht in der Hilfe-Suchleiste in R, um über diese Funktion zu lesen und ein Beispiel für ihre Verwendung zu sehen. Versucht, auf eines der Keywords oder AutorInnen im Plot unten zu klicken.
 
 ```{r echo = FALSE}
 threeFieldsPlot(M, fields=c("DE","AU","SC"),n=c(10,10,10),width = 900)
 ```
 
-Achte darauf, dass ihr alle Ergebnisse und Diagramme aus dieser Aufgabe speichert. Wenn ihr fertig seid, würde ich empfehlen, dass ihr als Gruppe ein paar Sätze über jedes Diagramm schreibt - wie interpretiert ihr die Ergebnisse, die ihr erzeugt habt? Das wird es dir später leichter machen, dein Protokoll zu schreiben.
+Achte darauf, dass ihr alle Ergebnisse und Diagramme aus dieser Aufgabe speichert. Wenn ihr fertig seid, würde ich empfehlen, dass ihr als Gruppe ein paar Sätze über jedes Diagramm schreibt - wie interpretiert ihr die Ergebnisse, die ihr erzeugt habt? Das wird es euch später leichter machen, euer Protokoll zu schreiben.
 
 ## Systematic Mapping
 
-Im nächsten Teil dieser Aktivität geht es darum, deine Artikel zu sichten und einige Informationen aus ihnen zu extrahieren, um 'Systematic maps' zu erstellen. 
+Im nächsten Teil dieser Aktivität geht es darum, eure Artikel zu sichten und einige Informationen aus ihnen zu extrahieren, um 'Systematic maps' zu erstellen. 
 
 ### 1. Einschluss/Ausschluss-Kriterien
 
-Der erste Schritt besteht darin, deine Einschluss-/Ausschlusskriterien zu erstellen. Mit anderen Worten, was sind die Merkmale der Artikel, die du überprüfen wirst?
+Der erste Schritt besteht darin, eure Einschluss-/Ausschlusskriterien zu erstellen. Mit anderen Worten, was sind die Merkmale der Artikel, die ihr überprüfen wirst?
 
 Ihr solltet eure Forschungsfrage überdenken und entscheiden, welche Art von Artikeln und Daten nützlich sind, um eure Frage zu beantworten. Nehme ich meine Suche nach Boden/Nekromasse/Pilzen als Beispiel, könnte ich daran interessiert sein, wie die Pilzvielfalt und -aktivität die Zersetzung oder Stabilisierung von Nekromasse im Boden beeinflusst. Ich würde also nur Artikel einschließen, die sowohl Nekromasse als auch Pilzlebensgemeinschaften (Diversität oder Funktionen) untersuchen. Ich würde Studien ausschließen, die nur Bakterien und keine Pilze untersuchen, oder die nur die Laubstreu, aber nicht die Nekromasse untersuchen.
 
-Achte darauf, dass ihr eure Ein- und Ausschlusskriterien aufschreibt!! Dies ist sehr wichtig für die Reproduzierbarkeit und muss im Abschnitt 'Methoden' deines Protokolls geschrieben werden.
+Achte darauf, dass ihr eure Ein- und Ausschlusskriterien aufschreibt!! Dies ist sehr wichtig für die Reproduzierbarkeit und muss im Abschnitt 'Methoden' eures Protokolls geschrieben werden.
 
 ### 2. Aufteilung der Artikel
 
 Nun zurück zu R, aber nicht für lange! Wir werden `revtools` benutzen, um die Abstracts zu screenen.
-Lade das revtools-Paket und deine BibTeX-Datei:
+Ladet die revtools-Package und eure BibTeX-Datei:
 
 ```{r}
 library(revtools)
@@ -157,7 +157,7 @@ library(revtools)
 recs <- read_bibliography("soil_necromass_fungi.bib")
 ```
 
-Nun wirst ihr die Artikel mit der Funktion `allocate_effort` auf die Gruppenmitglieder aufteilen. Damit kann man die Anteile der Artikel pro Person bestimmen. Um eine robuste Systematic review zu haben, ist es notwendig, dass einige der Artikel von mehr als einer Person gescreent werden. In diesem Beispiel werden 19% der Artikel von mehr als einer Person gescreent (diese Funktion versucht, so nah wie möglich an den Anteil heranzukommen, den ihr in 'proportion_checked' gewählt habt). Auf diese Weise könnt ihr später sicherstellen, dass jeder die Einschluss-/Ausschlusskriterien auf die gleiche Weise anwendet.
+Nun werdet ihr die Artikel mit der Funktion `allocate_effort` auf die Gruppenmitglieder aufteilen. Damit kann man die Anteile der Artikel pro Person bestimmen. Um eine robuste Systematic review zu haben, ist es notwendig, dass einige der Artikel von mehr als einer Person gescreent werden. In diesem Beispiel werden 19% der Artikel von mehr als einer Person gescreent (diese Funktion versucht, so nah wie möglich an den Anteil heranzukommen, den ihr in 'proportion_checked' gewählt habt). Auf diese Weise könnt ihr später sicherstellen, dass jeder die Einschluss-/Ausschlusskriterien auf die gleiche Weise anwendet.
 
 ```{r}
 alleff <- allocate_effort(reviewers = c("India", "GroupMember1", "GroupMember2"), effort = c(0.33,0.34,0.33), proportion_checked = 0.2, quiet = FALSE)
@@ -167,11 +167,11 @@ alleff <- allocate_effort(reviewers = c("India", "GroupMember1", "GroupMember2")
 distribute_tasks(recs, alleff)
 ```
 
-Einige R-Magie ist hinter den Kulissen passiert, als ihr die zweite Code-Zeile ausgeführt habt. Wirf einen Blick in dein Arbeitsverzeichnis (oder in den Reiter "Dateien" in RStudio). Ihr solltet feststellen, dass es jetzt für jedes Mitglied eurer Gruppe eine .csv-Datei gibt! **Ein Gruppenmitglied sollte alle Dateien, die in diesem Schritt erstellt wurden, an die anderen Gruppenmitglieder senden** (sonst habt ihr alle eine zufällige Auswahl an Dateien und könnt nicht alle Abstracts durchsehen)!
+Ein wenig R-Magie ist hinter den Kulissen passiert, als ihr die zweite Code-Zeile ausgeführt habt. Werft einen Blick in euer Arbeitsverzeichnis (oder in den Tab "Dateien" in RStudio). Ihr solltet feststellen, dass es jetzt für jedes Mitglied eurer Gruppe eine .csv-Datei gibt! **Ein Gruppenmitglied sollte alle Dateien, die in diesem Schritt erstellt wurden, an die anderen Gruppenmitglieder senden** (sonst habt ihr alle eine zufällige Auswahl an Dateien und könnt nicht alle Abstracts durchsehen)!
 
 ### 3. Abstract-Screening
 
-Jetzt seid ihr bereit, mit dem Screening der Abstracts zu beginnen. Wenn R euch stresst, ist jetzt der Moment gekommen, euch zu freuen: ihr werdet nicht mehr lange in RStudio sein. Jetzt dürft ihr das Shiny Web Interface benutzen! Lade deine (persönliche) Datei in R und benutze dann die Funktion `screen_abstracts`. Es wird sich ein neues Fenster öffnen, in dem ihr eure Abstracts screenen könnt. Lies den Titel und den Abstract des Artikels und entscheide, basierend auf deinen Einschluss-/Ausschlusskriterien, ob der Artikel aufgenommen oder ausgeschlossen werden soll. Klicke auf "Select" oder "Exclude", je nach dem. Wenn ihr fertig seid, stellt sicher, dass ihr eure Daten speichert!!! Es wird nicht automatisch gespeichert!
+Jetzt seid ihr bereit, mit dem Screening der Abstracts zu beginnen. Wenn R euch stresst, könnt ihr euch jetzt freuen: ihr werdet nicht mehr lange in RStudio sein. Jetzt dürft ihr das hübsche Web Interface benutzen! Ladet eure (persönliche) Datei in R und benutzt dann die Funktion `screen_abstracts`. Es wird sich ein neues Fenster öffnen, in dem ihr eure Abstracts screenen könnt. Lest den Titel und den Abstract des Artikels und entscheidet, basierend auf euren Einschluss-/Ausschlusskriterien, ob der Artikel aufgenommen oder ausgeschlossen werden soll. Klickt auf "Select" oder "Exclude", je nachdem. Wenn ihr fertig seid, stellt sicher, dass ihr eure Daten speichert!!! Sie werden nicht automatisch gespeichert!
 
 ```{r eval = FALSE}
 india_papers <- read_bibliography("reviewer_India.csv")
@@ -180,7 +180,7 @@ screen_abstracts(india_papers)
 
 ### 4. Erstellen einer Datei mit den ausgewählten Artikeln
 
-Nachdem jeder mit dem Sichten der Artikel fertig ist, müsst ihr nun die Dateien wieder zusammenfügen. Das könnt ihr mit der Funktion `aggregate` in revtools machen. Achte darauf, dass die Anzahl der Spalten und die Spaltennamen in jeder .csv-Datei übereinstimmen, sonst wird das nicht funktionieren.
+Nachdem alle mit dem Sichten der Artikel fertig ist, müsst ihr nun die Dateien wieder zusammenfügen. Das könnt ihr mit der Funktion `aggregate` in revtools machen. Achtet darauf, dass die Anzahl der Spalten und die Spaltennamen in jeder .csv-Datei übereinstimmen, sonst wird das nicht funktionieren.
 
 ```{r eval = FALSE}
 screened <- c("IM_done.csv", "GM1_finished.csv", "GM2_yes.csv")
@@ -188,7 +188,7 @@ aggfiles <- aggregate_tasks(file_names = screened, selection_column = "screened_
 write.csv(aggfiles, "agg_screening_results.csv", row.names = F)
 ```
 
-Nun werdet ihr nach Artikeln suchen, die von einem oder mehreren Gruppenmitgliedern 'selected' wurden. Dies werden die Artikel sein, die ihr für das Systematic Mapping verwenden werdet und die im Datenrahmen 'def_sel' erscheinen werden, wenn ihr den Code unten ausführt. Ihr müsst auch nach Artikeln suchen, bei denen es "Konflikte" gab - bei denen eine Person denselben Artikel "selected" und eine andere Person ihn "excluded" hat. Diese werden im Dataframe 'conflict' erscheinen, wenn du den Code unten ausführst. Eure Gruppe sollte über jeden Artikel mit dem Konflikt-Datenrahmen sprechen und eine Entscheidung darüber treffen, ob sie jeden Artikel einschließen soll oder nicht. **Hinweis:** Im untenstehenden Code musst du die Spaltennummern `[,54:56]` ändern, damit sie zu *eurem* aggfiles dataframe passen. Diese Spalten sollten Informationen darüber enthalten, wie jeder Rezensent jeden Artikel gescreent hat. Die Anzahl der Spalten muss die gleiche sein wie die Anzahl der Gruppenmitglieder.
+Nun werdet ihr nach Artikeln suchen, die von einem oder mehreren Gruppenmitgliedern 'selected' wurden. Dies werden die Artikel sein, die ihr für das Systematic Mapping verwenden werdet und die im Datenrahmen 'def_sel' erscheinen werden, wenn ihr den Code unten ausführt. Ihr müsst auch nach Artikeln suchen, bei denen es "Konflikte" gab - bei denen eine Person denselben Artikel "selected" und eine andere Person ihn "excluded" hat. Diese werden im Dataframe 'conflict' erscheinen, wenn ihr den Code unten ausführst. Eure Gruppe sollte über jeden Artikel mit dem Konflikt-Datenrahmen sprechen und eine Entscheidung darüber treffen, ob sie jeden Artikel einschließen soll oder nicht. **Hinweis:** Im untenstehenden Code müsst ihr die Spaltennummern `[,54:56]` ändern, damit sie zu *eurem* aggfiles Data Frame passen. Diese Spalten sollten Informationen darüber enthalten, wie jede/r Reviewer jeden Artikel gescreent hat. Die Anzahl der Spalten muss die gleiche sein wie die Anzahl der Gruppenmitglieder.
 
 ```{r eval = FALSE}
 sel <- rowSums(aggfiles[,54:56] == "selected", na.rm = T)
@@ -200,7 +200,7 @@ def_sel <- aggfiles[c(aggfiles2$sel>0 & aggfiles2$excl==0),]
 conflict <- aggfiles[c(aggfiles2$sel>0 & aggfiles2$excl>0),]
 ```
 
-Der Datenrahmen def_sel enthält die ausgewählten Artikel. Nachdem du alle "Konflikt"-Artikel besprochen und entschieden hast, welche Artikel du einbeziehst oder nicht, kannst du Zeilen aus dem "Konflikt"-Datenframe mit `rbind` zum def_sel-Datenframe hinzufügen. **Tipp:** Schau mal, wie `cbind` im obigen Codeabschnitt verwendet wird. Erinnere euch auch daran, dass ihr einen kleinen Datenrahmen mit bestimmten Zeilen wie diesen erstellen könnt: `conflict[c(X,Y,Z),]`. Dann wirst du eine .csv Datei mit allen ausgewählten Artikeln erstellen:
+Der Datenrahmen def_sel enthält die ausgewählten Artikel. Nachdem ihr alle "Konflikt"-Artikel besprochen und entschieden habt, welche Artikel ihr einbezieht oder nicht, könnt ihr Zeilen aus dem "Konflikt"-Data Frame mit `rbind` zum def_sel-Datenframe hinzufügen. **Tipp:** Schaut mal, wie `cbind` im obigen Codeabschnitt verwendet wird. Erinnert euch auch daran, dass ihr einen kleinen Datenrahmen mit bestimmten Zeilen wie diesen erstellen könnt: `conflict[c(X,Y,Z),]`. Dann werdet ihr eine .csv Datei mit allen ausgewählten Artikeln erstellen:
 
 ```{r eval = FALSE}
 write.csv(def_sel, "selected_articles.csv", row.names = F)
