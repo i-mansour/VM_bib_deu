@@ -25,11 +25,11 @@ Diese Aktivität ist eine Einführung in einige Methoden und R-Packages, die ver
 
 > "Research weaving has the potential to provide a more efficient, in-depth, and broad synthesis of a research field, to identify **research biases, gaps, and limitations**. Such insights have the potential to inform ecological and environmental **policy** and **communicate research findings to the general public** in more effective ways then are typically done in current research syntheses."
 
-Ihr könnt mehr über das "Research Weaving" erfahren, indem ihr ihre Artikel [hier](https://doi.org/10.1016/j.tree.2018.11.007) lest.
+Ihr könnt mehr über das "Research Weaving" erfahren, indem ihr ihren Artikel [hier](https://doi.org/10.1016/j.tree.2018.11.007) lest.
 
 Ihr werdet damit beginnen, eine Forschungsfrage zu entwickeln und dann mit Web of Science [WoS](https://apps.webofknowledge.com/WOS_GeneralSearch_input.do?product=WOS&search_mode=GeneralSearch&SID=D5U7NnnEhob17JVozzU&preferencesSaved=) eine Literaturrecherche durchzuführen. Ihr müsst ein VPN eingerichtet haben, um WoS von zu Hause aus nutzen zu können - wenn ihr das noch nicht getan habt, folgt den Anweisungen der FU-Bibliothek [hier](https://www.zedat.fu-berlin.de/VPN).
 
-Denke daran, dass eure Gruppe eure Forschungsfrage und den 'Search string' genehmigt bekommen haben muss, bevor ihr fortfahrt! 
+Denkt daran, dass eure Gruppe eure Forschungsfrage und den 'Search string' genehmigt bekommen haben muss, bevor ihr fortfahrt! 
 
 Ihr werdet dann die Suchergebnisse als .bib-Datei exportieren. Diese wird verwendet, um eine explorative bibliometrische Analyse mit dem Paket `bibliometrix` durchzuführen (vielleicht erinnert ihr euch daran, wenn ihr das Ökologie Basismodul im Juni belegt habt).
 
@@ -39,7 +39,7 @@ Ihr werdet dann Einschluss-/Ausschlusskriterien entwickeln und die Package `revt
 
 ### 1. Finde ein Thema mit eurer Gruppe
 
-Eure erste Aufgabe ist es, eine Literaturrecherche im Web of Science (WoS) zum Thema **Kohlenstoffkreislauf, organische Bodensubstanz und/oder Zersetzung in Böden** durchzuführen. Ihr möchtet z.B. Literatur über Nekromasse erforschen, die Kohlenstoffdynamik in Wüstenböden untersuchen oder untersuchen, wie Trockenheit den Abbau organischer Substanz im Boden beeinflusst. Bitte besprecht das Thema in der Gruppe und findet ein Thema, das für euch alle interessant ist.
+Eure erste Aufgabe ist es, eine Literaturrecherche im Web of Science (WoS) zum Thema **Kohlenstoffkreislauf, organische Bodensubstanz und/oder Zersetzung in Böden** durchzuführen. Ihr möchtet z.B. Literatur über Nekromasse erforschen, die Kohlenstoffdynamik in Wüstenböden untersuchen oder untersuchen, wie Trockenheit den Abbau organischer Substanz im Boden beeinflusst. Bitte besprecht das Thema in der Gruppe und findet ein Thema, das euch alle interessiert.
 
 ### 2. Entwickelt eine Forschungsfrage
 
@@ -47,13 +47,13 @@ Dann solltet ihr euch eine Forschungsfrage überlegen. Diese sollte so allgemein
 
 ### 3. Beginnt die Suche...und entwickelt einen Search string
 
-Ihr werdet euren eigenen Search string erstellen müssen, mit Ergebnissen im Bereich von 100-300 Artikeln. Euer Ziel ist es, einen Search string zu erstellen, der *alle* Artikel erfasst, die für dein Forschungsthema relevant sind. 
+Ihr werdet euren eigenen Search string erstellen müssen, mit Ergebnissen im Bereich von 100-300 Artikeln. Euer Ziel ist es, einen Search string zu erstellen, der *alle* Artikel erfasst, die für euer Forschungsthema relevant sind. 
 
 Hier sind einige Beispiele für Search strings:
 
 > ("soil organic matter"  OR "soil organic carbon"  OR "organic matter")  AND (decomposition  OR degradation)  AND drought
 
-dieser Suchstring verwendet Anführungszeichen "", um sicherzustellen, dass nur Artikel mit dem gesamten Ausdruck "soil organic matter" in den Ergebnissen erscheinen. Er verwendet auch mehrere Wörter, z.B. "decomposition" und "degradation", um die gleiche Sache zu beschreiben. Dies erhöht die Chancen, alle relevanten Artikel zu finden.
+dieser Search string verwendet Anführungszeichen "", um sicherzustellen, dass nur Artikel mit dem gesamten Ausdruck "soil organic matter" in den Ergebnissen erscheinen. Er verwendet auch mehrere Wörter, z.B. "decomposition" und "degradation", um die gleiche Sache zu beschreiben. Dies erhöht die Chancen, alle relevanten Artikel zu finden.
 
 > (soil  AND necromass AND fung*)
 
@@ -73,7 +73,7 @@ Sobald euer Thema genehmigt ist, könnt ihr mit der bibliometrischen Analyse beg
 
 ### 1. Erstelle eine BibTeX-Datei im Web of Science
 
-Ich habe ein Tutorial-Video aufgenommen, das zeigt, wie man eine Literatursuche im Web of Science durchführt und die Ergebnisse als .bib-Datei exportiert. Dieses ist auf [VBrick](https://fu-berlin.eu.vbrickrev.com/sharevideo/2cb4b6bb-11a1-4b38-8618-705412d5fde3) verfügbar. Folgt dem Video und erstelle eure BibTeX-Datei.
+Ich habe ein Tutorial-Video aufgenommen, das zeigt, wie man eine Literatursuche im Web of Science durchführt und die Ergebnisse als .bib-Datei exportiert. Dieses ist auf [VBrick](https://fu-berlin.eu.vbrickrev.com/sharevideo/2cb4b6bb-11a1-4b38-8618-705412d5fde3) verfügbar. Folgt dem Video und erstellt eure BibTeX-Datei.
 
 ### 2. Beginne eure Bibliometrics Analyse
 
@@ -99,7 +99,7 @@ Diese 2-Buchstaben-Codes werden 'field tags' genannt und es gibt eine komplette 
 
 ### 3. Eine deskriptive Analyse durchführen
 
-Folgt dem Tutorial weiter und führe eine deskriptive [Bibliometric analysis](https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html#bibliometric-analysis) durch. Führe die Funktion `summary` aus. Schaut euch die Ergebnisse der Zusammenfassung in der Konsole an. Schreibt die Zeitspanne und die Anzahl der Quellen und Dokumente auf. Was sind die 5 am häufigsten zitierten Artikel in eurer Sammlung? Kopiert die DOIs in Web of Science und schaut euch die Abstracts an (Tipp: einige dieser Artikel könnten gut in der Einleitung eures Protokolls zitiert werden). Führt nun die Funktion `plot` aus. Speichere die Plots, die die "Most Productive Countries" und die "Annual Scientific Production" zeigen.
+Folgt dem Tutorial weiter und führe eine deskriptive [Bibliometric analysis](https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html#bibliometric-analysis) durch. Führt die Funktion `summary` aus. Schaut euch die Ergebnisse der Zusammenfassung in der Konsole an. Schreibt die Zeitspanne und die Anzahl der Quellen und Dokumente auf. Was sind die 5 am häufigsten zitierten Artikel in eurer Sammlung? Kopiert die DOIs in Web of Science und schaut euch die Abstracts an (Tipp: einige dieser Artikel könnten gut in der Einleitung eures Protokolls zitiert werden). Führt nun die Funktion `plot` aus. Speichert die Plots, die die "Most Productive Countries" und die "Annual Scientific Production" zeigen.
 
 ```{r include = FALSE}
 file <- "/Users/fastloris/Dropbox/Vertiefungsmodul course materials/WS2021/Praktikum/VM_bib_deu/soil_necromass_fungi.bib"
@@ -130,19 +130,19 @@ Schließlich werden wir die Beziehungen zwischen AutorInnen, Keywords und WoS-Ka
 threeFieldsPlot(M, fields=c("DE","AU","SC"),n=c(10,10,10),width = 900)
 ```
 
-Achte darauf, dass ihr alle Ergebnisse und Diagramme aus dieser Aufgabe speichert. Wenn ihr fertig seid, würde ich empfehlen, dass ihr als Gruppe ein paar Sätze über jedes Diagramm schreibt - wie interpretiert ihr die Ergebnisse, die ihr erzeugt habt? Das wird es euch später leichter machen, euer Protokoll zu schreiben.
+Achtet darauf, dass ihr alle Ergebnisse und Diagramme aus dieser Aufgabe speichert. Wenn ihr fertig seid, würde ich empfehlen, dass ihr als Gruppe ein paar Sätze über jedes Diagramm schreibt - wie interpretiert ihr die Ergebnisse, die ihr erzeugt habt? Das wird es euch später leichter machen, euer Protokoll zu schreiben.
 
 ## Systematic Mapping
 
-Im nächsten Teil dieser Aktivität geht es darum, eure Artikel zu sichten und einige Informationen aus ihnen zu extrahieren, um 'Systematic maps' zu erstellen. 
+Im nächsten Teil dieser Aktivität geht es darum, eure Artikel zu screenen und einige Informationen aus ihnen zu extrahieren, um 'Systematic maps' zu erstellen. 
 
 ### 1. Einschluss/Ausschluss-Kriterien
 
-Der erste Schritt besteht darin, eure Einschluss-/Ausschlusskriterien zu erstellen. Mit anderen Worten, was sind die Merkmale der Artikel, die ihr überprüfen wirst?
+Der erste Schritt besteht darin, eure Einschluss-/Ausschlusskriterien zu erstellen. Mit anderen Worten, was sind die Merkmale der Artikel, die ihr überprüfen werdet?
 
 Ihr solltet eure Forschungsfrage überdenken und entscheiden, welche Art von Artikeln und Daten nützlich sind, um eure Frage zu beantworten. Nehme ich meine Suche nach Boden/Nekromasse/Pilzen als Beispiel, könnte ich daran interessiert sein, wie die Pilzvielfalt und -aktivität die Zersetzung oder Stabilisierung von Nekromasse im Boden beeinflusst. Ich würde also nur Artikel einschließen, die sowohl Nekromasse als auch Pilzlebensgemeinschaften (Diversität oder Funktionen) untersuchen. Ich würde Studien ausschließen, die nur Bakterien und keine Pilze untersuchen, oder die nur die Laubstreu, aber nicht die Nekromasse untersuchen.
 
-Achte darauf, dass ihr eure Ein- und Ausschlusskriterien aufschreibt!! Dies ist sehr wichtig für die Reproduzierbarkeit und muss im Abschnitt 'Methoden' eures Protokolls geschrieben werden.
+Achtet darauf, dass ihr eure Ein- und Ausschlusskriterien aufschreibt!! Dies ist sehr wichtig für die Reproduzierbarkeit und muss im Abschnitt 'Methoden' eures Protokolls geschrieben werden.
 
 ### 2. Aufteilung der Artikel
 
@@ -188,7 +188,7 @@ aggfiles <- aggregate_tasks(file_names = screened, selection_column = "screened_
 write.csv(aggfiles, "agg_screening_results.csv", row.names = F)
 ```
 
-Nun werdet ihr nach Artikeln suchen, die von einem oder mehreren Gruppenmitgliedern 'selected' wurden. Dies werden die Artikel sein, die ihr für das Systematic Mapping verwenden werdet und die im Datenrahmen 'def_sel' erscheinen werden, wenn ihr den Code unten ausführt. Ihr müsst auch nach Artikeln suchen, bei denen es "Konflikte" gab - bei denen eine Person denselben Artikel "selected" und eine andere Person ihn "excluded" hat. Diese werden im Dataframe 'conflict' erscheinen, wenn ihr den Code unten ausführst. Eure Gruppe sollte über jeden Artikel mit dem Konflikt-Datenrahmen sprechen und eine Entscheidung darüber treffen, ob sie jeden Artikel einschließen soll oder nicht. **Hinweis:** Im untenstehenden Code müsst ihr die Spaltennummern `[,54:56]` ändern, damit sie zu *eurem* aggfiles Data Frame passen. Diese Spalten sollten Informationen darüber enthalten, wie jede/r Reviewer jeden Artikel gescreent hat. Die Anzahl der Spalten muss die gleiche sein wie die Anzahl der Gruppenmitglieder.
+Nun werdet ihr nach Artikeln suchen, die von einem oder mehreren Gruppenmitgliedern 'selected' wurden. Dies werden die Artikel sein, die ihr für das Systematic Mapping verwenden werdet und die im Datenrahmen 'def_sel' erscheinen werden, wenn ihr den Code unten ausführt. Ihr müsst auch nach Artikeln suchen, bei denen es "Konflikte" gab - bei denen eine Person denselben Artikel "selected" und eine andere Person ihn "excluded" hat. Diese werden im Dataframe 'conflict' erscheinen, wenn ihr den Code unten ausführt. Eure Gruppe sollte über jeden Artikel mit dem Konflikt-Datenrahmen sprechen und eine Entscheidung darüber treffen, ob sie jeden Artikel einschließen soll oder nicht. **Hinweis:** Im untenstehenden Code müsst ihr die Spaltennummern `[,54:56]` ändern, damit sie zu *eurem* aggfiles Data Frame passen. Diese Spalten sollten Informationen darüber enthalten, wie jede/r Reviewer jeden Artikel gescreent hat. Die Anzahl der Spalten muss die gleiche sein wie die Anzahl der Gruppenmitglieder.
 
 ```{r eval = FALSE}
 sel <- rowSums(aggfiles[,54:56] == "selected", na.rm = T)
