@@ -1,6 +1,6 @@
 ---
-title: "Praktikum Aktivität 3"
-author: "Dr. India Mansour, with translation by Ayla Kesim"
+title: "Praktikum R-Aktivität 2"
+author: "Dr. India Mansour, mit Übersetzung von Ayla Kesim"
 date: "Januar 2021 (aktualisiert Januar 2023)"
 output: 
   html_document:
