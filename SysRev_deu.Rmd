@@ -1,7 +1,7 @@
 ---
 title: "Praktikum Aktivität 3"
 author: "Dr. India Mansour, with translation by Ayla Kesim"
-date: "January 2021"
+date: "Januar 2021 (aktualisiert Januar 2023)"
 output: 
   html_document:
     toc: true
@@ -39,15 +39,15 @@ Ihr werdet dann Einschluss-/Ausschlusskriterien entwickeln und die Package `revt
 
 ### 1. Finde ein Thema mit eurer Gruppe
 
-Eure erste Aufgabe ist es, eine Literaturrecherche im Web of Science (WoS) zum Thema **Kohlenstoffkreislauf, organische Bodensubstanz und/oder Zersetzung in Böden** durchzuführen. Ihr möchtet z.B. Literatur über Nekromasse erforschen, die Kohlenstoffdynamik in Wüstenböden untersuchen oder untersuchen, wie Trockenheit den Abbau organischer Substanz im Boden beeinflusst. Bitte besprecht das Thema in der Gruppe und findet ein Thema, das euch alle interessiert.
+Eure erste Aufgabe ist es, eine Literaturrecherche im Web of Science (WoS) zum Thema **mikrobielle Biosphäre** durchzuführen. Mögliche Themen sind: (1) closed systems ecological research, (2) microbial ecology research using artificial soils, (3) microbial necromass in soil, (4) microbial necromass recycling, and (5) microorganisms and ecosystem stability. Ihr könnt auch ein eigenes Thema vorschlagen, das ihr interessant findet, solange es für die mikrobielle Biosphärenforschung relevant ist. Besprecht dies bitte mit eurer Gruppe und findet ein Thema, das für euch alle interessant ist. 
 
 ### 2. Entwickelt eine Forschungsfrage
 
-Dann solltet ihr euch eine Forschungsfrage überlegen. Diese sollte so allgemein sein, dass sie durch eine Literaturrecherche beantwortet werden kann. Zum Beispiel: "Wie beeinflusst Trockenheit die Zersetzung organischer Substanz im Boden?" oder "Wie tragen Pilze zur Nekromassendynamik im Boden bei?".
+Dann solltet ihr euch eine Forschungsfrage ausdenken. Diese sollte so allgemein gehalten sein, dass sie durch eine Literaturrecherche beantwortet werden kann. Zum Beispiel: "Welche Erkenntnisse haben wir aus der Forschung mit künstlichen Böden über mikrobielle Ökologie gewonnen?" oder "Welche Themen und Organismen wurden in geschlossenen ökologischen Systemen untersucht?".
 
 ### 3. Beginnt die Suche...und entwickelt einen Search string
 
-Ihr werdet euren eigenen Search string erstellen müssen, mit Ergebnissen im Bereich von 100-300 Artikeln. Euer Ziel ist es, einen Search string zu erstellen, der *alle* Artikel erfasst, die für euer Forschungsthema relevant sind. 
+Euer Ziel ist es, einen Suchbegriff zu erstellen, der *alle* Artikel erfasst, die für euer Forschungsthema relevant sind. Das bedeutet, dass ihr über alle möglichen Begriffe nachdenken solltet, die dasselbe beschreiben könnten, und diese mit einbeziehen solltet. Wenn du eine "echte" bibliometrische Analyse und ein systematisches Mapping durchführst, werden alle relevanten Artikel erfasst - das können Tausende von Artikeln sein. Da wir im Kurs nur ein paar Wochen Zeit haben, solltet ihr euch ein Thema aussuchen, zu dem ihr **100-300 Artikel** findet. Wenn eure WoS-Suche mehr Ergebnisse liefert, solltet ihr den Umfang reduzieren (z.B. indem ihr euch auf ein spezifischeres Thema konzentriert).
 
 Hier sind einige Beispiele für Search strings:
 
@@ -63,7 +63,9 @@ Ihr könnt über die Operatoren (z.B. AND und OR) lesen, die ihr in eurem Search
 
 ### 4. Verfeinert die Suche und den Search string
 
-Es gibt *eine Menge* Literatur über Bodenkohlenstoff - stellt sicher, dass ihr eure Suche verfeinert, um etwa 100-300 Ergebnisse zu erhalten. Ihr solltet alle zuerst versuchen, die Anzahl der Ergebnisse zu reduzieren, indem ihr eure Forschungsfrage spezifischer macht. Konzentriert euch zum Beispiel auf eine bestimmten Art von Ökosystem (tropischer Wald oder Grasland). Falls nötig, könnt ihr die Anzahl der Suchergebnisse weiter reduzieren, indem ihr die 'Refine Results'-Kategorien auf WoS nutzt. Ihr könntet zum Beispiel die Jahre der Suche eingrenzen oder Review-Artikel ausschließen. Schreibt auf, was ihr tut! Und denkt daran, diese Entscheidungen werden später beeinflussen, wie ihr eure Ergebnisse interpretiert!
+Es gibt *eine Menge* Literatur über Bodenkohlenstoff - stellt sicher, dass ihr eure Suche verfeinert, um etwa 100-300 Ergebnisse zu erhalten. Ihr solltet alle zuerst versuchen, die Anzahl der Ergebnisse zu reduzieren, indem ihr eure Forschungsfrage spezifischer macht. Konzentriert euch zum Beispiel auf eine bestimmten Art von Ökosystem (Pilze oder Bakterien). Falls nötig, könnt ihr die Anzahl der Suchergebnisse weiter einschränken, indem ihr die Kategorien "Ergebnisse verfeinern" auf WoS nutzt. Ihr könnt zum Beispiel Übersichtsartikel ausschließen, wenn ihr euch auf experimentelle Forschung konzentrieren wollt. Wenn eure Suche weniger als 100 Ergebnisse liefert, solltet ihr den Bereich erweitern. Wenn wir (ich und die Tutor*innen) deinen Suchbegriff und deine Forschungsfrage überprüfen, können wir dir dabei helfen. 
+
+Schreibt auf, was ihr tut! Und denkt daran, diese Entscheidungen werden später beeinflussen, wie ihr eure Ergebnisse interpretiert!
 
 **Wenn ihr euch für ein Thema entschieden habt, muss es von mir genehmigt werden, bevor eure Gruppe weitermacht.**
 
@@ -73,7 +75,9 @@ Sobald euer Thema genehmigt ist, könnt ihr mit der bibliometrischen Analyse beg
 
 ### 1. Erstelle eine BibTeX-Datei im Web of Science
 
-Ich habe ein Tutorial-Video aufgenommen, das zeigt, wie man eine Literatursuche im Web of Science durchführt und die Ergebnisse als .bib-Datei exportiert. Dieses ist auf [VBrick](https://fu-berlin.eu.vbrickrev.com/sharevideo/2cb4b6bb-11a1-4b38-8618-705412d5fde3) verfügbar. Folgt dem Video und erstellt eure BibTeX-Datei.
+Eine Anleitung, wie du eine BibTeX-Datei (.bib) über WoS erstellen kannst, findest du in [diesem Tutorial] (https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html). Das Tutorial stammt von den Autoren des Pakets `bibliometrix`, Massimo Aria und Corrado Cuccurullo, und enthält viele Informationen über die verschiedenen verfügbaren Funktionen (Aria & Cuccurullo, 2017). Die Codestücke auf dieser Website stammen aus ihrem Tutorial.
+
+Ich habe auch ein Tutorial-Video aufgenommen, das zeigt, wie man eine Literatursuche im Web of Science durchführt und die Ergebnisse als .bib-Datei exportiert. Dieses ist auf [VBrick](https://fu-berlin.eu.vbrickrev.com/sharevideo/2cb4b6bb-11a1-4b38-8618-705412d5fde3) verfügbar. Folge dem Tutorial der Wahl und erstellt eure BibTeX-Datei. Achte darauf, wie ihr die Datei benennt und in welchem Ordner ihr sie speichert!
 
 ### 2. Beginne eure Bibliometrics Analyse
 
@@ -91,7 +95,13 @@ library(bibliometrix)
 
 [Die Dokumentation findet sich hier](https://cran.r-project.org/web/packages/bibliometrix/bibliometrix.pdf).
 
-Sobald ihr eine .bib-Datei erstellt habt, müsst ihr die Daten mit der Package `bibliometrix` in R laden und eine bibliometrische Analyse durchführen. Folgt [diesem Tutorial](https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html). Wir beginnen mit dem Abschnitt [Data loading and converting](https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html#data-loading-and-converting). Es kann sein, dass ihr ein paar Minuten warten müsst, bis der bibliografische Data Frame generiert wird... achtet auf die Konsole!
+Sobald ihr eine .bib-Datei erstellt habt, müsst ihr die Daten mit dem Paket `bibliometrix` in R laden und eine bibliometrische Analyse durchführen. Wir beginnen damit, die Daten zu laden und sie in einen bibliometrischen Datenrahmen zu konvertieren. Es kann sein, dass ihr ein paar Minuten warten müsst, bis der bibliometrische Datenrahmen generiert wird... achtet auf die Konsole!
+
+```{r eval = F, message = F}
+file <- "your_bibtex_file.bib"
+
+M <- convert2df(file = file, dbsource = "isi", format = "bibtex")
+```
 
 Sobald der Data Frame geladen ist, überprüft ihn. Was sind die Spaltennamen?
 Tipp: versucht es mit `colnames()`.
@@ -99,10 +109,17 @@ Diese 2-Buchstaben-Codes werden 'field tags' genannt und es gibt eine komplette 
 
 ### 3. Eine deskriptive Analyse durchführen
 
-Folgt dem Tutorial weiter und führe eine deskriptive [Bibliometric analysis](https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html#bibliometric-analysis) durch. Führt die Funktion `summary` aus. Schaut euch die Ergebnisse der Zusammenfassung in der Konsole an. Schreibt die Zeitspanne und die Anzahl der Quellen und Dokumente auf. Was sind die 5 am häufigsten zitierten Artikel in eurer Sammlung? Kopiert die DOIs in Web of Science und schaut euch die Abstracts an (Tipp: einige dieser Artikel könnten gut in der Einleitung eures Protokolls zitiert werden). Führt nun die Funktion `plot` aus. Speichert die Plots, die die "Most Productive Countries" und die "Annual Scientific Production" zeigen.
+Führe eine deskriptive bibliometrische Analyse durch und drucke eine Zusammenfassung der Ergebnisse mit `biblioAnalysis` und `summary`.
+
+```{r eval = F, message = F}
+results <- biblioAnalysis(M, sep = ";")
+S <- summary(object = results, k = 10, pause = FALSE)
+```
+
+Schaut euch die Ergebnisse der Zusammenfassung in der Konsole an, um einen Eindruck von eurer Artikelsammlung zu bekommen. Welches sind die 5 meistzitierten Artikel in deiner Sammlung? Kopiere die DOIs in Web of Science und lies die Zusammenfassungen - warum glaubt ihr, dass sie hoch zitiert werden? 
 
 ```{r include = FALSE}
-file <- "/Users/fastloris/Dropbox/Vertiefungsmodul course materials/WS2021/Praktikum/VM_bib_deu/soil_necromass_fungi.bib"
+file <- "/Users/fastloris/Desktop/Desktop/Vertiefungsmodul course materials/WS2021/Praktikum/VM_biblio/soil_necromass_fungi.bib"
 M <- convert2df(file = file, dbsource = "isi", format = "bibtex")
 results <- biblioAnalysis(M, sep = ";")
 S <- summary(object = results, k = 10, pause = FALSE)
@@ -115,22 +132,44 @@ M["MILTNER A, 2012, BIOGEOCHEMISTRY", "DI"]
 M["MILTNER A, 2012, BIOGEOCHEMISTRY", "PY"]
 ```
 
-Nun wollen wir herausfinden, wie sich euer Forschungsthema im Laufe der Zeit entwickelt hat. Folgt dem Tutorial-Abschnitt [Top-Authors’ Productivity over the Time](https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html#top-authors-productivity-over-the-time). Speichert diesen Plot (bei einigen Datensätzen funktioniert das nicht gut -- wenn es nicht funktioniert, verzweifelt nicht, verwendet die/den 'produktivste/n AutorIn' Plot von vorher). Wer sind die AutorInnen, die heutzutage am meisten publizieren? Wer waren die AutorInnen, die früher am meisten veröffentlicht haben? Gibt es AutorInnen, die über einen langen Zeitraum regelmäßig publizieren? (Tipp: Ihr solltet euch einige dieser AutorInnen auf Referenzen für euer Protokoll angucken.)
+Führe nun die Funktion `plot` aus. Speichere das Diagramm, das die "produktivsten Länder" zeigt.
 
-Schauen wir uns nun an, wie die Keywords in den Artikeln miteinander verbunden sind. Dies wird uns einen Einblick geben, wie die Unterthemen innerhalb deines Themas miteinander verbunden sind. Folgt dem Tutorial, um [Keyword co-ccurrences](https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html#keyword-co-occurrences) darzustellen. Gibt es Cluster von Keywords? Welche Ideen sind miteinander verbunden? Was sagt euch das über euer Thema? Zeigt dies etwas über die Art und Weise, wie Gruppen von Menschen über dieses Thema nachdenken/daran forschen?
-
-```{r echo = FALSE}
-NetMatrix <- biblioNetwork(M, analysis = "co-occurrences", network = "keywords", sep = ";")
-net=networkPlot(NetMatrix, normalize="association", weighted=T, n = 30, Title = "Keyword Co-occurrences", type = "fruchterman", size=T,edgesize = 5,labelsize=0.7)
+```{r eval = F, message = F}
+plot(x = results, k = 10, pause = FALSE)
 ```
 
-Schließlich werden wir die Beziehungen zwischen AutorInnen, Keywords und WoS-Kategorien untersuchen. Das Beispiel unten zeigt Verbindungen zwischen AutorInnen, Keywords und WoS-Kategorien. Ihr könnt jede beliebigen 3 Field Tags benutzen -- die Betrachtung von Journals (SO) oder Common Cited References (CR) könnte auch interessant sein. Wir werden dies mit einem Three-fields plot machen, mit der Funktion `threeFieldsPlot`. Sucht in der Hilfe-Suchleiste in R, um über diese Funktion zu lesen und ein Beispiel für ihre Verwendung zu sehen. Versucht, auf eines der Keywords oder AutorInnen im Plot unten zu klicken.
+### 4. Untersuche die Schlüsselwörter und ihre Beziehungen
 
-```{r echo = FALSE}
-threeFieldsPlot(M, fields=c("DE","AU","SC"),n=c(10,10,10),width = 900)
+Schauen wir uns an, wie die Schlüsselwörter in den Artikeln miteinander verbunden sind. Das gibt uns Aufschluss darüber, wie die Unterthemen innerhalb eures Themas miteinander verbunden sind. Gibt es Cluster von Stichwörtern? Welche Ideen sind miteinander verbunden? Was sagt euch das über euer Thema? Verrät dies etwas über die Art und Weise, wie Gruppen von Menschen über dieses Thema denken/studieren?
+
+```{r}
+NetMatrix <- biblioNetwork(M, analysis = "co-occurrences", network = "keywords", sep = ";") # dies schafft das Netzwerk
+net=networkPlot(NetMatrix, normalize="association", weighted=T, n = 30, Title = "Keyword Co-occurrences", type = "fruchterman", size=T,edgesize = 5,labelsize=0.7) # Dies zeichnet das Netzwerk auf
 ```
 
-Achtet darauf, dass ihr alle Ergebnisse und Diagramme aus dieser Aufgabe speichert. Wenn ihr fertig seid, würde ich empfehlen, dass ihr als Gruppe ein paar Sätze über jedes Diagramm schreibt - wie interpretiert ihr die Ergebnisse, die ihr erzeugt habt? Das wird es euch später leichter machen, euer Protokoll zu schreiben.
+### 5. Lokale Zitationsnetzwerke
+
+Wir können lokale Zitationsnetzwerke nutzen, um die Beziehungen zwischen den Artikeln in unserer Sammlung zu untersuchen, z. B. welche Autoren oder Artikel in unserer Sammlung häufig von anderen in der Sammlung zitiert wurden. Dazu könnt ihr `localCitations` verwenden.
+
+```{r}
+CR <- localCitations(M, sep = ";")
+```
+
+Die Ergebnisse werden in "CR" gespeichert, das nun Informationen über die am häufigsten *lokal* zitierten Autor/innen und Artikel in eurer Sammlung enthält. Beachte, dass "LCS" Informationen über *lokale* Zitate (d.h. Zitate innerhalb der Sammlung) liefert und "GCS" Informationen über *globale* Zitate (d.h. die Anzahl der Zitate, die diese/r Autor/in oder Artikel insgesamt hat). Um das besser zu verstehen, sieh dir die Top 3 der lokal zitierten Autor/innen in "CR" an. Wenn ihr ein Diagramm der produktivsten Autor/innen im Laufe der Zeit erstellt, findet ihr dann die gleichen Top-3-Autor/innen? Warum oder warum nicht?
+
+```{r}
+topAU <- authorProdOverTime(M, k = 10, graph = TRUE)
+```
+
+### 6. Three fields plot
+
+Schließlich werden wir die Beziehungen zwischen Autoren, Schlagwörtern und WoS-Kategorien untersuchen. Ihr könnt jedes beliebige 3-Felder-Schlagwort wählen, das ihr möchtet - es könnte auch interessant sein, Journale (Quellen) oder häufig zitierte Referenzen zu untersuchen. Wir werden dazu einen 'Drei-Felder-Plot'three fields plot' mit der Funktion `threeFieldsPlot` verwenden. Suche in der Hilfe-Suchleiste von R, um mehr über diese Funktion zu erfahren und ein Beispiel für ihre Verwendung zu sehen. Klicke auf eines der Stichwörter oder eine/n Autor/in in der Grafik unten.
+
+```{r echo = FALSE}
+threeFieldsPlot(M, fields=c("AU","DE","SC"),n=c(10,10,10))
+```
+
+Achte darauf, dass ihr alle Ergebnisse und Diagramme aus dieser Übung speichert. Ihr könnt nun den ersten Teil des Arbeitsblatts für diese Aktivität ausfüllen.
 
 ## Systematic Mapping
 
@@ -140,9 +179,9 @@ Im nächsten Teil dieser Aktivität geht es darum, eure Artikel zu screenen und 
 
 Der erste Schritt besteht darin, eure Einschluss-/Ausschlusskriterien zu erstellen. Mit anderen Worten, was sind die Merkmale der Artikel, die ihr überprüfen werdet?
 
-Ihr solltet eure Forschungsfrage überdenken und entscheiden, welche Art von Artikeln und Daten nützlich sind, um eure Frage zu beantworten. Nehme ich meine Suche nach Boden/Nekromasse/Pilzen als Beispiel, könnte ich daran interessiert sein, wie die Pilzvielfalt und -aktivität die Zersetzung oder Stabilisierung von Nekromasse im Boden beeinflusst. Ich würde also nur Artikel einschließen, die sowohl Nekromasse als auch Pilzlebensgemeinschaften (Diversität oder Funktionen) untersuchen. Ich würde Studien ausschließen, die nur Bakterien und keine Pilze untersuchen, oder die nur die Laubstreu, aber nicht die Nekromasse untersuchen.
+Ihr solltet eure Forschungsfrage überdenken und entscheiden, welche Art von Artikeln und Daten nützlich sind, um eure Frage zu beantworten. Nehme ich meine Suche nach Boden/Nekromasse/Pilzen als Beispiel, könnte ich daran interessiert sein, wie die Pilzvielfalt und -aktivität die Zersetzung oder Stabilisierung von Nekromasse im Boden beeinflusst. Ich würde also nur Artikel einschließen, die sowohl Nekromasse als auch Pilzlebensgemeinschaften (Diversität oder Funktionen) untersuchen. Ich würde Studien ausschließen, die nur Bakterien und keine Pilze untersuchen, oder die nur die Laubstreu, aber nicht die Nekromasse untersuchen. Ich würde auch alle Artikel ausschließen, die nicht über Ergebnisse aus experimenteller Forschung berichten (z. B. Übersichtsartikel).
 
-Achtet darauf, dass ihr eure Ein- und Ausschlusskriterien aufschreibt!! Dies ist sehr wichtig für die Reproduzierbarkeit und muss im Abschnitt 'Methoden' eures Protokolls geschrieben werden.
+Achtet darauf, dass ihr eure Ein- und Ausschlusskriterien aufschreibt!! Dies ist sehr wichtig für die Reproduzierbarkeit.
 
 ### 2. Aufteilung der Artikel
 
@@ -208,7 +247,7 @@ write.csv(def_sel, "selected_articles.csv", row.names = F)
 
 ### 5. Datenextraktion
 
-Nun beginnt ihr mit der Extraktion von Daten aus euren Artikeln. Ihr solltet ein paar Informationen auswählen, die für *euer* Thema relevant sind. Einige Ideen könnten sein: Art des Artikels, Art des Ökosystems, untersuchter Organismus... Versucht, dies nicht zu kompliziert zu machen, sonst wird es sehr zeitaufwendig. Beispiele für Fragen, die ihr mit den extrahierten Daten beantworten könntet: Wurden die meisten Studien in gemäßigten Grasländern oder tropischen Wäldern durchgeführt? Haben sich die ForscherInnen hauptsächlich auf Bodenmikroben oder Bodentiere konzentriert?
+Nun beginnt ihr mit der Extraktion von Daten aus euren Artikeln. Ihr solltet ein paar Informationen auswählen, die für *euer* Thema relevant sind. Einige Ideen könnten sein: Art des Artikels, Art des Studie, untersuchter Organismus... Versucht, dies nicht zu kompliziert zu machen, sonst wird es sehr zeitaufwendig. Beispiele für Fragen, die ihr mit den extrahierten Daten beantworten könntet: "Waren die meisten Artikel Übersichtsartikel oder experimentell? Haben sich die ForscherInnen hauptsächlich auf Bodenmikroben oder Bodentiere konzentriert?
 
 Öffnet "selected_articles.csv" mit Excel, GoogleSheets oder was auch immer eure Gruppe am liebsten verwendet. Löscht alle Spalten außer dem Veröffentlichungsjahr, Journal, Titel, AutorInnen und DOI. Erstellt neue Spaltennamen mit dem Namen der Daten, die eure Gruppe aus den Artikeln extrahieren wird. Arbeitet zusammen, um die Daten aus den Artikeln zu extrahieren und füllt die Spalten in der Tabelle aus. Ihr müsst die Artikel über den DOI suchen. (Manchmal funktioniert es am besten, wenn ihr den DOI und die Zeichenkette "doi" in Google kopiert, und stellt sicher, dass ihr mit eurem VPN eingeloggt seid, damit ihr Zugang habt!) Wenn ihr fertig seid mit dem Extrahieren der Daten aus jedem Artikel, speichert die Ergebnisse als .csv-Datei.
 
@@ -228,19 +267,9 @@ Wenn euch das Farbschema gefällt, schaut euch mal die [Wes Anderson Paletten f�
 
 Hilfe! --> Geht zurück zu [R for Data Science](https://r4ds.had.co.nz/data-visualisation.html). In der [R Graph Gallery](https://www.r-graph-gallery.com/index.html) findet man Informationen darüber, wie man eine Menge verschiedener Arten von Abbildungen in R erstellen kann.
 
-### 7. Glückwunsch, ihr habt es geschafft! Jetzt ist es Zeit für das Protokoll.
+### 7. Fast fertig!
 
-Okay, jetzt habt ihr einige Ergebnisse! Es ist an der Zeit, sie mit eurer Gruppe zu besprechen und euer Protokoll zu schreiben. Das Protokoll muss die folgenden Abschnitte beinhalten:
-
-- Einführung: Erläutert einige Hintergrundinformationen zu eurem Thema und zitiert 3-5 peer-reviewed Artikel.
-
-- Methoden: Enthält euren Search string, alle weiteren Einschränkungen eurer Suche in WoS, eure Einschluss-/Ausschlusskriterien und Informationen über die Packages, die ihr in R verwendet habt (denke daran, die AutorInnen der Packages zu zitieren!).
-
-- Ergebnisse: Gebt einige allgemeine Informationen an (wie viele WoS-Ergebnisse hattet du? Wie viele Artikel sind nach dem Screening übrig geblieben?); fügt alle bibliometrischen und systematischen Mapping-Abbildungen hinzu, die ihr erstellt habt, und beschreibt jede Abbildung in 1-2 Sätzen.
-
-- Diskussion: Schreibt darüber, wie ihr eure Ergebnisse interpretiert. Dies könnte ein guter Anlass sein, um eure Ergebnisse mit einem früheren Artikel zu einem ähnlichen Thema zu vergleichen.
-
-- Referenzen: Hier müsst ihr vollständige Referenzen für alle in eurem Protokoll zitierte Literatur angeben (es sollte in etwa wie die Referenzliste unten aussehen).
+Ihr habt die Aktivität abgeschlossen, herzlichen Glückwunsch! Jetzt solltet ihr das Arbeitsblatt ausfüllen, alle Fragen beantworten und eure Plots einfügen. Um eine Anrechnung für die aktive Teilnahme zu erhalten, schicke bitte (1) dein ausgefülltes Arbeitsblatt als .docx- oder .pdf-Datei per E-Mail an mich: immansour@zedat.fu-berlin.de UND (2) zeigt eure Arbeit eine/m Tutor/in und diskutiert eure Antworten mit ihr/ihm/them.
 
 ## Referenzen
 
