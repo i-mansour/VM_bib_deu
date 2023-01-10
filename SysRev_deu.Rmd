@@ -1,6 +1,6 @@
 ---
 title: "Praktikum R-Aktivität 2"
-author: "Dr. India Mansour, mit Übersetzung von Ayla Kesim"
+author: "Dr. India Mansour, mit Übersetzung von Ayla Kesim und Nils Töpfer"
 date: "Januar 2021 (aktualisiert Januar 2023)"
 output: 
   html_document:
@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Überblick
 
-Diese Aktivität ist eine Einführung in einige Methoden und R-Packages, die verwendet werden können, um eine "Systematic Review" der Literatur durchzuführen. Wir werden diese Methoden benutzen, um die Literatur über **Bodenkohlenstoff** zu untersuchen. Wir werden das von Nakagawa *et al.* (2019) vorgeschlagene "research weaving"-Framework verwenden, das Bibliometrie und systematisches Mapping beinhaltet. Aus ihrem Abstract (Hervorhebung von mir):
+Diese Aktivität ist eine Einführung in einige Methoden und R-Packages, die verwendet werden können, um eine "Systematic Review" der Literatur durchzuführen. Wir werden diese Methoden benutzen, um die Literatur über **microbial biospherics** zu untersuchen. Wir werden das von Nakagawa *et al.* (2019) vorgeschlagene "research weaving"-Framework verwenden, das Bibliometrie und systematisches Mapping beinhaltet. Aus ihrem Abstract (Hervorhebung von mir):
 
 > "Research weaving provides a novel framework that **combines bibliometrics and systematic mapping** to inform the development of a field, the influence of research papers and their interconnections, and to visualize content across and within publications."
 
@@ -37,7 +37,7 @@ Ihr werdet dann Einschluss-/Ausschlusskriterien entwickeln und die Package `revt
 
 ## Entwickeln einer Forschungsfrage und eines Search string
 
-### 1. Finde ein Thema mit eurer Gruppe
+### 1. Findet ein Thema mit eurer Gruppe
 
 Eure erste Aufgabe ist es, eine Literaturrecherche im Web of Science (WoS) zum Thema **mikrobielle Biosphäre** durchzuführen. Mögliche Themen sind: (1) closed systems ecological research, (2) microbial ecology research using artificial soils, (3) microbial necromass in soil, (4) microbial necromass recycling, and (5) microorganisms and ecosystem stability. Ihr könnt auch ein eigenes Thema vorschlagen, das ihr interessant findet, solange es für die mikrobielle Biosphärenforschung relevant ist. Besprecht dies bitte mit eurer Gruppe und findet ein Thema, das für euch alle interessant ist. 
 
@@ -59,11 +59,11 @@ dieser Search string verwendet Anführungszeichen "", um sicherzustellen, dass n
 
 dieser Search string verwendet ein Sternchen *, so dass alle Ergebnisse, die mit 'fung' beginnen, angezeigt werden (z.B. fungi, fungus, fungicide).
 
-Ihr könnt über die Operatoren (z.B. AND und OR) lesen, die ihr in eurem Search string verwenden müsst [hier](https://images.webofknowledge.com/images/help/WOS/hs_search_operators.html) und es gibt weitere [WoS-Suchtipps hier](https://clarivate.libguides.com/woscc/searchtips).
+Über die Operatoren (z.B. AND oder OR), die ihr für euren Search string verwenden müsst, könnt ihr euch hier belesen.
 
 ### 4. Verfeinert die Suche und den Search string
 
-Es gibt *eine Menge* Literatur über Bodenkohlenstoff - stellt sicher, dass ihr eure Suche verfeinert, um etwa 100-300 Ergebnisse zu erhalten. Ihr solltet alle zuerst versuchen, die Anzahl der Ergebnisse zu reduzieren, indem ihr eure Forschungsfrage spezifischer macht. Konzentriert euch zum Beispiel auf eine bestimmten Art von Ökosystem (Pilze oder Bakterien). Falls nötig, könnt ihr die Anzahl der Suchergebnisse weiter einschränken, indem ihr die Kategorien "Ergebnisse verfeinern" auf WoS nutzt. Ihr könnt zum Beispiel Übersichtsartikel ausschließen, wenn ihr euch auf experimentelle Forschung konzentrieren wollt. Wenn eure Suche weniger als 100 Ergebnisse liefert, solltet ihr den Bereich erweitern. Wenn wir (ich und die Tutor*innen) deinen Suchbegriff und deine Forschungsfrage überprüfen, können wir dir dabei helfen. 
+Wenn eure Suche mehr als 300 Ergebnisse liefert, solltet ihr zunächst versuchen, die Anzahl der Ergebnisse zu reduzieren, indem ihr eure Forschungsfrage genauer formuliert. Konzentriere dich zum Beispiel auf eine bestimmte Organismengruppe (z. B. Pilze oder Bakterien). Falls nötig, kannst du die Anzahl der Suchergebnisse weiter reduzieren, indem du die Kategorien "Ergebnisse verfeinern" auf WoS nutzt. So könnt ihr zum Beispiel Artikel ausschließen, wenn ihr euch auf experimentelle Forschung konzentrieren wollt. Wenn ihr weniger als 100 Ergebnisse erhaltet, solltet ihr die Suche ausweiten. Wenn wir (ich und die Tutor/innen) euren Suchbegriff und eure Forschungsfrage überprüfen, können wir euch dabei helfen.
 
 Schreibt auf, was ihr tut! Und denkt daran, diese Entscheidungen werden später beeinflussen, wie ihr eure Ergebnisse interpretiert!
 
@@ -75,19 +75,19 @@ Sobald euer Thema genehmigt ist, könnt ihr mit der bibliometrischen Analyse beg
 
 ### 1. Erstelle eine BibTeX-Datei im Web of Science
 
-Eine Anleitung, wie du eine BibTeX-Datei (.bib) über WoS erstellen kannst, findest du in [diesem Tutorial] (https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html). Das Tutorial stammt von den Autoren des Pakets `bibliometrix`, Massimo Aria und Corrado Cuccurullo, und enthält viele Informationen über die verschiedenen verfügbaren Funktionen (Aria & Cuccurullo, 2017). Die Codestücke auf dieser Website stammen aus ihrem Tutorial.
+Eine Anleitung, wie ihr eine BibTeX-Datei (.bib) über WoS erstellen könnt, findet ihr in [diesem Tutorial](https://www.bibliometrix.org/vignettes/Introduction_to_bibliometrix.html). Das Tutorial stammt von den Autoren des Pakets `bibliometrix`, Massimo Aria und Corrado Cuccurullo, und enthält viele Informationen über die verschiedenen verfügbaren Funktionen (Aria & Cuccurullo, 2017). Die Codestücke auf dieser Website stammen aus ihrem Tutorial.
 
-Ich habe auch ein Tutorial-Video aufgenommen, das zeigt, wie man eine Literatursuche im Web of Science durchführt und die Ergebnisse als .bib-Datei exportiert. Dieses ist auf [VBrick](https://fu-berlin.eu.vbrickrev.com/sharevideo/2cb4b6bb-11a1-4b38-8618-705412d5fde3) verfügbar. Folge dem Tutorial der Wahl und erstellt eure BibTeX-Datei. Achte darauf, wie ihr die Datei benennt und in welchem Ordner ihr sie speichert!
+Ich habe auch ein Tutorial-Video aufgenommen, das zeigt, wie man eine Literatursuche im Web of Science durchführt und die Ergebnisse als .bib-Datei exportiert. Dieses ist auf [VBrick](https://fu-berlin.eu.vbrickrev.com/sharevideo/2cb4b6bb-11a1-4b38-8618-705412d5fde3) verfügbar. Folge dem Tutorial euer Wahl und erstellt eure BibTeX-Datei. Achtet darauf, wie ihr die Datei benennt und in welchem Ordner ihr sie speichert!
 
-### 2. Beginne eure Bibliometrics Analyse
+### 2. Beginnet eure Bibliometrics Analyse
 
-Nun könnt ihr mit der Arbeit in R beginnen. Erstellt ein neues R-Skript für das Projekt. Falls ihr die Package `bibliometrix` noch nicht installiert habt, tut dies bitte jetzt, etwa so: 
+Nun könnt ihr mit der Arbeit in R beginnen. Erstellt ein neues R-Skript für das Projekt. Falls ihr das Package `bibliometrix` noch nicht installiert habt, tut dies bitte jetzt, etwa so: 
 
 ```{r eval = FALSE}
 install.packages("bibliometrix", dependencies=TRUE)
 ```
 
-und ladet dann die Package:
+und ladet dann das Package:
 
 ```{r message = FALSE}
 library(bibliometrix)
@@ -116,7 +116,7 @@ results <- biblioAnalysis(M, sep = ";")
 S <- summary(object = results, k = 10, pause = FALSE)
 ```
 
-Schaut euch die Ergebnisse der Zusammenfassung in der Konsole an, um einen Eindruck von eurer Artikelsammlung zu bekommen. Welches sind die 5 meistzitierten Artikel in deiner Sammlung? Kopiere die DOIs in Web of Science und lies die Zusammenfassungen - warum glaubt ihr, dass sie hoch zitiert werden? 
+Schaut euch die Ergebnisse der Zusammenfassung in der Konsole an, um einen Eindruck von eurer Artikelsammlung zu bekommen. Welches sind die 5 meistzitierten Artikel in deiner Sammlung? Kopiere ihre DOIs und füge sie bei Web of Science ein, um ihre Abstracts zu lesen - warum glaubt ihr, dass sie hoch zitiert werden? 
 
 ```{r include = FALSE}
 file <- "/Users/fastloris/Desktop/Desktop/Vertiefungsmodul course materials/WS2021/Praktikum/VM_biblio/soil_necromass_fungi.bib"
@@ -143,7 +143,7 @@ plot(x = results, k = 10, pause = FALSE)
 Schauen wir uns an, wie die Schlüsselwörter in den Artikeln miteinander verbunden sind. Das gibt uns Aufschluss darüber, wie die Unterthemen innerhalb eures Themas miteinander verbunden sind. Gibt es Cluster von Stichwörtern? Welche Ideen sind miteinander verbunden? Was sagt euch das über euer Thema? Verrät dies etwas über die Art und Weise, wie Gruppen von Menschen über dieses Thema denken/studieren?
 
 ```{r}
-NetMatrix <- biblioNetwork(M, analysis = "co-occurrences", network = "keywords", sep = ";") # dies schafft das Netzwerk
+NetMatrix <- biblioNetwork(M, analysis = "co-occurrences", network = "keywords", sep = ";") # dies erstellt das Netzwerk
 net=networkPlot(NetMatrix, normalize="association", weighted=T, n = 30, Title = "Keyword Co-occurrences", type = "fruchterman", size=T,edgesize = 5,labelsize=0.7) # Dies zeichnet das Netzwerk auf
 ```
 
@@ -163,7 +163,7 @@ topAU <- authorProdOverTime(M, k = 10, graph = TRUE)
 
 ### 6. Three fields plot
 
-Schließlich werden wir die Beziehungen zwischen Autoren, Schlagwörtern und WoS-Kategorien untersuchen. Ihr könnt jedes beliebige 3-Felder-Schlagwort wählen, das ihr möchtet - es könnte auch interessant sein, Journale (Quellen) oder häufig zitierte Referenzen zu untersuchen. Wir werden dazu einen 'Drei-Felder-Plot'three fields plot' mit der Funktion `threeFieldsPlot` verwenden. Suche in der Hilfe-Suchleiste von R, um mehr über diese Funktion zu erfahren und ein Beispiel für ihre Verwendung zu sehen. Klicke auf eines der Stichwörter oder eine/n Autor/in in der Grafik unten.
+Schließlich werden wir die Beziehungen zwischen Autoren, Schlagwörtern und WoS-Kategorien untersuchen. Ihr könnt jedes beliebige 3-Felder-Schlagwort wählen, das ihr möchtet - es könnte auch interessant sein, Journale (Quellen) oder häufig zitierte Referenzen zu untersuchen. Wir werden dazu einen 'three fields plot' mit der Funktion `threeFieldsPlot` verwenden. Suche in der Hilfe-Suchleiste von R, um mehr über diese Funktion zu erfahren und ein Beispiel für ihre Verwendung zu sehen. Klicke auf eines der Stichwörter oder eine/n Autor/in in der Grafik unten.
 
 ```{r echo = FALSE}
 threeFieldsPlot(M, fields=c("AU","DE","SC"),n=c(10,10,10))
@@ -186,7 +186,7 @@ Achtet darauf, dass ihr eure Ein- und Ausschlusskriterien aufschreibt!! Dies ist
 ### 2. Aufteilung der Artikel
 
 Nun zurück zu R, aber nicht für lange! Wir werden `revtools` benutzen, um die Abstracts zu screenen.
-Ladet die revtools-Package und eure BibTeX-Datei:
+Ladet das revtools-Package und eure BibTeX-Datei:
 
 ```{r}
 library(revtools)
@@ -219,7 +219,7 @@ screen_abstracts(india_papers)
 
 ### 4. Erstellen einer Datei mit den ausgewählten Artikeln
 
-Nachdem alle mit dem Sichten der Artikel fertig ist, müsst ihr nun die Dateien wieder zusammenfügen. Das könnt ihr mit der Funktion `aggregate` in revtools machen. Achtet darauf, dass die Anzahl der Spalten und die Spaltennamen in jeder .csv-Datei übereinstimmen, sonst wird das nicht funktionieren.
+Nachdem alle mit dem Sichten der Artikel fertig sind, müsst ihr nun die Dateien wieder zusammenfügen. Das könnt ihr mit der Funktion `aggregate` in revtools machen. Achtet darauf, dass die Anzahl der Spalten und die Spaltennamen in jeder .csv-Datei übereinstimmen, sonst wird das nicht funktionieren.
 
 ```{r eval = FALSE}
 screened <- c("IM_done.csv", "GM1_finished.csv", "GM2_yes.csv")
@@ -227,7 +227,7 @@ aggfiles <- aggregate_tasks(file_names = screened, selection_column = "screened_
 write.csv(aggfiles, "agg_screening_results.csv", row.names = F)
 ```
 
-Nun werdet ihr nach Artikeln suchen, die von einem oder mehreren Gruppenmitgliedern 'selected' wurden. Dies werden die Artikel sein, die ihr für das Systematic Mapping verwenden werdet und die im Datenrahmen 'def_sel' erscheinen werden, wenn ihr den Code unten ausführt. Ihr müsst auch nach Artikeln suchen, bei denen es "Konflikte" gab - bei denen eine Person denselben Artikel "selected" und eine andere Person ihn "excluded" hat. Diese werden im Dataframe 'conflict' erscheinen, wenn ihr den Code unten ausführt. Eure Gruppe sollte über jeden Artikel mit dem Konflikt-Datenrahmen sprechen und eine Entscheidung darüber treffen, ob sie jeden Artikel einschließen soll oder nicht. **Hinweis:** Im untenstehenden Code müsst ihr die Spaltennummern `[,54:56]` ändern, damit sie zu *eurem* aggfiles Data Frame passen. Diese Spalten sollten Informationen darüber enthalten, wie jede/r Reviewer jeden Artikel gescreent hat. Die Anzahl der Spalten muss die gleiche sein wie die Anzahl der Gruppenmitglieder.
+Nun werdet ihr nach Artikeln suchen, die von einem oder mehreren Gruppenmitgliedern 'selected' wurden. Dies werden die Artikel sein, die ihr für das Systematic Mapping verwenden werdet und die im Dataframe 'def_sel' erscheinen werden, wenn ihr den Code unten ausführt. Ihr müsst auch nach Artikeln suchen, bei denen es "Konflikte" gab - bei denen eine Person denselben Artikel "selected" und eine andere Person ihn "excluded" hat. Diese werden im Dataframe 'conflict' erscheinen, wenn ihr den Code unten ausführt. Eure Gruppe sollte über jeden Artikel mit dem Konflikt-Dataframe sprechen und eine Entscheidung darüber treffen, ob sie jeden Artikel einschließen soll oder nicht. **Hinweis:** Im untenstehenden Code müsst ihr die Spaltennummern `[,54:56]` ändern, damit sie zu *eurem* aggfiles Data Frame passen. Diese Spalten sollten Informationen darüber enthalten, wie jede/r Reviewer jeden Artikel gescreent hat. Die Anzahl der Spalten muss die gleiche sein wie die Anzahl der Gruppenmitglieder.
 
 ```{r eval = FALSE}
 sel <- rowSums(aggfiles[,54:56] == "selected", na.rm = T)
@@ -239,7 +239,7 @@ def_sel <- aggfiles[c(aggfiles2$sel>0 & aggfiles2$excl==0),]
 conflict <- aggfiles[c(aggfiles2$sel>0 & aggfiles2$excl>0),]
 ```
 
-Der Datenrahmen def_sel enthält die ausgewählten Artikel. Nachdem ihr alle "Konflikt"-Artikel besprochen und entschieden habt, welche Artikel ihr einbezieht oder nicht, könnt ihr Zeilen aus dem "Konflikt"-Data Frame mit `rbind` zum def_sel-Datenframe hinzufügen. **Tipp:** Schaut mal, wie `cbind` im obigen Codeabschnitt verwendet wird. Erinnert euch auch daran, dass ihr einen kleinen Datenrahmen mit bestimmten Zeilen wie diesen erstellen könnt: `conflict[c(X,Y,Z),]`. Dann werdet ihr eine .csv Datei mit allen ausgewählten Artikeln erstellen:
+Der Dataframe def_sel enthält die ausgewählten Artikel. Nachdem ihr alle "Konflikt"-Artikel besprochen und entschieden habt, welche Artikel ihr einbezieht oder nicht, könnt ihr Zeilen aus dem "Konflikt"-Dataframe mit `rbind` zum def_sel-Dataframe hinzufügen. **Tipp:** Schaut mal, wie `cbind` im obigen Codeabschnitt verwendet wird. Erinnert euch auch daran, dass ihr einen kleinen Dataframe mit bestimmten Zeilen wie diesen erstellen könnt: `conflict[c(X,Y,Z),]`. Dann werdet ihr eine .csv Datei mit allen ausgewählten Artikeln erstellen:
 
 ```{r eval = FALSE}
 write.csv(def_sel, "selected_articles.csv", row.names = F)
@@ -247,16 +247,16 @@ write.csv(def_sel, "selected_articles.csv", row.names = F)
 
 ### 5. Datenextraktion
 
-Nun beginnt ihr mit der Extraktion von Daten aus euren Artikeln. Ihr solltet ein paar Informationen auswählen, die für *euer* Thema relevant sind. Einige Ideen könnten sein: Art des Artikels, Art des Studie, untersuchter Organismus... Versucht, dies nicht zu kompliziert zu machen, sonst wird es sehr zeitaufwendig. Beispiele für Fragen, die ihr mit den extrahierten Daten beantworten könntet: "Waren die meisten Artikel Übersichtsartikel oder experimentell? Haben sich die ForscherInnen hauptsächlich auf Bodenmikroben oder Bodentiere konzentriert?
+Nun beginnt ihr mit der Extraktion von Daten aus euren Artikeln. Ihr solltet ein paar Informationen auswählen, die für *euer* Thema relevant sind. Einige Ideen könnten sein: Art des Artikels, Art der Studie, untersuchter Organismus... Versucht, dies nicht zu kompliziert zu machen, sonst wird es sehr zeitaufwendig. Beispiele für Fragen, die ihr mit den extrahierten Daten beantworten könntet: "Waren die meisten Artikel Übersichtsartikel oder experimentell? Haben sich die Forscher/innen hauptsächlich auf Bodenmikroben oder Bodentiere konzentriert?"
 
 Öffnet "selected_articles.csv" mit Excel, GoogleSheets oder was auch immer eure Gruppe am liebsten verwendet. Löscht alle Spalten außer dem Veröffentlichungsjahr, Journal, Titel, AutorInnen und DOI. Erstellt neue Spaltennamen mit dem Namen der Daten, die eure Gruppe aus den Artikeln extrahieren wird. Arbeitet zusammen, um die Daten aus den Artikeln zu extrahieren und füllt die Spalten in der Tabelle aus. Ihr müsst die Artikel über den DOI suchen. (Manchmal funktioniert es am besten, wenn ihr den DOI und die Zeichenkette "doi" in Google kopiert, und stellt sicher, dass ihr mit eurem VPN eingeloggt seid, damit ihr Zugang habt!) Wenn ihr fertig seid mit dem Extrahieren der Daten aus jedem Artikel, speichert die Ergebnisse als .csv-Datei.
 
 ### 6. Datenvisualisierung
 
-Ladet die .csv-Datei mit euren Screening-Ergebnissen und verwendet eure neuen Fähigkeiten aus Aufgabe 1, um 1-2 Abbildungen^ mit Hilfe von ggplot in R zu erstellen. Euer Ziel hier ist es, einige Informationen über eure Gruppe von Artikeln zu zeigen, indem ihr die Daten verwendet, die ihr aus den Artikeln extrahiert habt. 
-Einige Beispiele (eure Zahlen müssen nicht so kompliziert sein, aber ihr dürft es gerne versuchen!):
+Ladet die .csv-Datei mit euren Screening-Ergebnissen und verwendet eure neuen Fähigkeiten aus R-Activität 1, um 1-2 Abbildungen mit Hilfe von ggplot in R zu erstellen. Euer Ziel hier ist es, einige Informationen über eure Gruppe von Artikeln zu zeigen, indem ihr die Daten verwendet, die ihr aus den Artikeln extrahiert habt. 
+Einige Beispiele (eure Abbildungen müssen nicht so kompliziert sein, aber ihr dürft es gerne versuchen!):
 
-![Diese Abbildungen zeigt verschiedene Behandlungsarten, die in verschiedenen Studien angewendet wurden. Dies wird als "Lollipop-Diagramm" bezeichnet. Beachtet, dass die Temperatur die häufigste Behandlung in allen Studien war.](BRV_Fig1b_v2.png)
+![Diese Abbildung zeigt verschiedene Behandlungsarten, die in verschiedenen Studien angewendet wurden. Dies wird als "Lollipop-Diagramm" bezeichnet. Beachtet, dass die Temperatur die häufigste Behandlung in allen Studien war.](BRV_Fig1b_v2.png)
 
 ![Hier wird gezeigt, wie verschiedene Studientypen ("Classification") über die untersuchten Ebenen der ökologischen Organisation verteilt wurden. Beachtet, dass es weniger Studien auf den Ebenen "Community" und "Ecosystem" gibt, und die meisten Studien auf der Ebene "Individual" experimentell waren.](BRV_Fig1c.png)
 
