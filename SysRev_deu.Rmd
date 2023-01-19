@@ -147,6 +147,18 @@ NetMatrix <- biblioNetwork(M, analysis = "co-occurrences", network = "keywords",
 net=networkPlot(NetMatrix, normalize="association", weighted=T, n = 30, Title = "Keyword Co-occurrences", type = "fruchterman", size=T,edgesize = 5,labelsize=0.7) # Dies zeichnet das Netzwerk auf
 ```
 
+Ihr könnt auch die Verbindungen zwischen Schlüsselwörtern und Themen mit `conceptualStructure` untersuchen - dies erzeugt vier Darstellungen - seht euch das Topic Dendrogram und Conceptual Structure Map an.
+
+```{r, message=FALSE, warning=FALSE}
+CS <- conceptualStructure(M,
+                          field="DE", # this chooses keywords for the plot
+                          method="MCA",
+                          minDegree = 4, # this is the minimum number of occurences of a keyword in the collection to analyze and plot; change this if too few or too many words appear
+                          clust= "auto",
+                          labelsize=10)
+```
+
+
 ### 5. Lokale Zitationsnetzwerke
 
 Wir können lokale Zitationsnetzwerke nutzen, um die Beziehungen zwischen den Artikeln in unserer Sammlung zu untersuchen, z. B. welche Autor/innen oder Artikel in unserer Sammlung häufig von anderen in der Sammlung zitiert wurden. Dazu könnt ihr `localCitations` verwenden.
