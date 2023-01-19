@@ -149,13 +149,25 @@ net=networkPlot(NetMatrix, normalize="association", weighted=T, n = 30, Title = 
 
 ### 5. Lokale Zitationsnetzwerke
 
-Wir können lokale Zitationsnetzwerke nutzen, um die Beziehungen zwischen den Artikeln in unserer Sammlung zu untersuchen, z. B. welche Autoren oder Artikel in unserer Sammlung häufig von anderen in der Sammlung zitiert wurden. Dazu könnt ihr `localCitations` verwenden.
+Wir können lokale Zitationsnetzwerke nutzen, um die Beziehungen zwischen den Artikeln in unserer Sammlung zu untersuchen, z. B. welche Autor/innen oder Artikel in unserer Sammlung häufig von anderen in der Sammlung zitiert wurden. Dazu könnt ihr `localCitations` verwenden.
 
 ```{r}
 CR <- localCitations(M, sep = ";")
 ```
 
-Die Ergebnisse werden in "CR" gespeichert, das nun Informationen über die am häufigsten *lokal* zitierten Autor/innen und Artikel in eurer Sammlung enthält. Beachte, dass "LCS" Informationen über *lokale* Zitate (d.h. Zitate innerhalb der Sammlung) liefert und "GCS" Informationen über *globale* Zitate (d.h. die Anzahl der Zitate, die diese/r Autor/in oder Artikel insgesamt hat). Um das besser zu verstehen, sieh dir die Top 3 der lokal zitierten Autor/innen in "CR" an. Wenn ihr ein Diagramm der produktivsten Autor/innen im Laufe der Zeit erstellt, findet ihr dann die gleichen Top-3-Autor/innen? Warum oder warum nicht?
+Die Ergebnisse werden in `CR` gespeichert, das nun Informationen über die am häufigsten *lokal* zitierten Autor/innen und Artikel in eurer Sammlung enthält. Beachte, dass “LCS” Informationen über *lokale* Zitate (d.h. Zitate innerhalb der Sammlung) liefert und “GCS” Informationen über *globale* Zitate (d.h. die Anzahl der Zitate, die diese/r Autor/in oder Artikel insgesamt hat). Um das besser zu verstehen, sieh dir die Top 3 der lokal zitierten Artikel in `CR` an.
+
+```{r echo = F}
+CR$Papers[1:3,]
+```
+
+Jetzt lasst uns einen Blick auf die Autor/innen mit den meisten *lokalen* Zitaten aus `CR` werfen. Vergleicht diese Autor/innen mit den Autor/innen der Liste mit den Top 5 *global* zitierten Artikeln eurer deskriptiven Analyse. Sind es die gleichen Autor/innen? Die gleiche Reihenfolge? Warum oder warum nicht?
+
+```{r echo = F}
+CR$Authors[1:3,]
+```
+
+Jetzt erstellt ein Diagramm der produktivsten Autor/innen über die Zeit. Es zeigt die Autor/innen mit den meisten Publikationen der Sammlung. Kommen irgendwelche von den top lokal zitierten Autor/innen eurer Liste in dem Diagramm vor? Waren sie „Pioniere“ in diesem Gebiet (d.h. frühes Publikationsdatum)? Publizieren sie aktuell aktiv zu dem Thema? In diesem Beispiel ist der einzige Autor C.W. Fernandez, welcher kürzlich vier Publikationen zu unserem Thema veröffentlicht hat.
 
 ```{r}
 topAU <- authorProdOverTime(M, k = 10, graph = TRUE)
