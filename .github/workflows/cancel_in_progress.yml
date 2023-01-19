@@ -1,12 +1,17 @@
-name: Deploy_error
+name: CI
 
+name: CI
 on:
-  workflow_dispatch:
   pull_request:
-      types: [opened, synchronize, reopened]
+    branches:
+    - master
+  push:
+    branches:
+      - master
 
-concurrency:
-  group: ${{ main }}
-  cancel-in-progress: true
+jobs:
+  concurrency:
+    group: ${{ main }}
+    cancel-in-progress: true
 
 # Canceling since a higher priority waiting request for 'pages build and deployment @ main' exists
