@@ -175,7 +175,7 @@ topAU <- authorProdOverTime(M, k = 10, graph = TRUE)
 
 ### 6. Three fields plot
 
-Schließlich werden wir die Beziehungen zwischen Autoren, Schlagwörtern und WoS-Kategorien untersuchen. Ihr könnt jedes beliebige 3-Felder-Schlagwort wählen, das ihr möchtet - es könnte auch interessant sein, Journale (Quellen) oder häufig zitierte Referenzen zu untersuchen. Wir werden dazu einen 'three fields plot' mit der Funktion `threeFieldsPlot` verwenden. Suche in der Hilfe-Suchleiste von R, um mehr über diese Funktion zu erfahren und ein Beispiel für ihre Verwendung zu sehen. Klicke auf eines der Stichwörter oder eine/n Autor/in in der Grafik unten.
+Schließlich werden wir die Beziehungen zwischen Autor/innen, Schlagwörtern und WoS-Kategorien untersuchen. Ihr könnt jedes beliebige 3-Felder-Schlagwort wählen, das ihr möchtet - es könnte auch interessant sein, Journale (Quellen) oder häufig zitierte Referenzen zu untersuchen. Wir werden dazu einen 'three fields plot' mit der Funktion `threeFieldsPlot` verwenden. Suche in der Hilfe-Suchleiste von R, um mehr über diese Funktion zu erfahren und ein Beispiel für ihre Verwendung zu sehen. Klicke auf eines der Stichwörter oder eine/n Autor/in in der Grafik unten.
 
 ```{r echo = FALSE}
 threeFieldsPlot(M, fields=c("AU","DE","SC"),n=c(10,10,10))
